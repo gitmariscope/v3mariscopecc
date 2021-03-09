@@ -44,12 +44,12 @@ namespace testform
                 formrov.MdiParent = this;
                 formrov.FormClosed += new FormClosedEventHandler(CloseForm);
                 formrov.Show();
-
             }
             else
             {
                 formrov.Activate(); 
             }
+
         }
         void CloseForm(object sender, FormClosedEventArgs e)
         {
@@ -154,6 +154,11 @@ namespace testform
             {
                 fc3.Activate();
             }
+        }
+
+        private void comunicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
 
         //private void abrirForms(string camera)
