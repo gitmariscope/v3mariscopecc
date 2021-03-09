@@ -1,0 +1,34 @@
+C:\Users\Administrador\source\repos\testform\bin\Debug\testform.exe.config
+C:\Users\Administrador\source\repos\testform\bin\Debug\testform.exe
+C:\Users\Administrador\source\repos\testform\bin\Debug\testform.pdb
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.csprojAssemblyReference.cache
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.Form1.resources
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.Properties.Resources.resources
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.csproj.GenerateResource.cache
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.csproj.CoreCompileInputs.cache
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.exe
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.pdb
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.FormROV.resources
+C:\Users\Administrador\source\repos\testform\obj\Debug\testform.FormIPCam.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\testform.exe.config
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\testform.exe
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\testform.pdb
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csprojAssemblyReference.cache
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.FormROV.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.Properties.Resources.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csproj.GenerateResource.cache
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csproj.CoreCompileInputs.cache
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.exe
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.pdb
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.FormMain.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\Interop.AXISMEDIACONTROLLib.dll
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\AxInterop.AXISMEDIACONTROLLib.dll
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\Interop.AXISMEDIACONTROLLib.dll
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\AxInterop.AXISMEDIACONTROLLib.dll
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csproj.ResolveComReference.cache
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.fSetCam2.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.fSetCam3.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.fSetCam1.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.fCam1.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.fCam2.resources
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.fCam3.resources
