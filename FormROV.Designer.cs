@@ -31,14 +31,13 @@ namespace testform
         {
             this.components = new System.ComponentModel.Container();
             this.gbPortSettings = new System.Windows.Forms.GroupBox();
+            this.lblPortsOk = new System.Windows.Forms.Label();
             this.cbxBaudrate = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscarPuertos = new System.Windows.Forms.Button();
             this.lblComPort = new System.Windows.Forms.Label();
             this.cbxPorts = new System.Windows.Forms.ComboBox();
             this.btnConectar = new System.Windows.Forms.Button();
             this.txtBoxDatosSerialPort = new System.Windows.Forms.TextBox();
-            this.btnRecibirDatos = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SpPuertos = new System.IO.Ports.SerialPort(this.components);
             this.gbPortSettings.SuspendLayout();
@@ -47,9 +46,9 @@ namespace testform
             // 
             // gbPortSettings
             // 
+            this.gbPortSettings.Controls.Add(this.lblPortsOk);
             this.gbPortSettings.Controls.Add(this.cbxBaudrate);
             this.gbPortSettings.Controls.Add(this.label1);
-            this.gbPortSettings.Controls.Add(this.btnBuscarPuertos);
             this.gbPortSettings.Controls.Add(this.lblComPort);
             this.gbPortSettings.Controls.Add(this.cbxPorts);
             this.gbPortSettings.Controls.Add(this.btnConectar);
@@ -59,6 +58,16 @@ namespace testform
             this.gbPortSettings.TabIndex = 33;
             this.gbPortSettings.TabStop = false;
             this.gbPortSettings.Text = "Serial Port &Settings";
+            // 
+            // lblPortsOk
+            // 
+            this.lblPortsOk.AutoSize = true;
+            this.lblPortsOk.Location = new System.Drawing.Point(6, 27);
+            this.lblPortsOk.Name = "lblPortsOk";
+            this.lblPortsOk.Size = new System.Drawing.Size(55, 13);
+            this.lblPortsOk.TabIndex = 37;
+            this.lblPortsOk.Text = "lblPortsOk";
+            this.lblPortsOk.Visible = false;
             // 
             // cbxBaudrate
             // 
@@ -90,16 +99,6 @@ namespace testform
             this.label1.TabIndex = 35;
             this.label1.Text = "Baudrate:";
             // 
-            // btnBuscarPuertos
-            // 
-            this.btnBuscarPuertos.Location = new System.Drawing.Point(6, 24);
-            this.btnBuscarPuertos.Name = "btnBuscarPuertos";
-            this.btnBuscarPuertos.Size = new System.Drawing.Size(101, 24);
-            this.btnBuscarPuertos.TabIndex = 34;
-            this.btnBuscarPuertos.Text = "Buscar Puertos";
-            this.btnBuscarPuertos.UseVisualStyleBackColor = true;
-            this.btnBuscarPuertos.Click += new System.EventHandler(this.btnBuscarPuertos_Click);
-            // 
             // lblComPort
             // 
             this.lblComPort.AutoSize = true;
@@ -130,25 +129,17 @@ namespace testform
             // 
             // txtBoxDatosSerialPort
             // 
-            this.txtBoxDatosSerialPort.Location = new System.Drawing.Point(6, 51);
+            this.txtBoxDatosSerialPort.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.txtBoxDatosSerialPort.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtBoxDatosSerialPort.Location = new System.Drawing.Point(6, 19);
             this.txtBoxDatosSerialPort.Multiline = true;
             this.txtBoxDatosSerialPort.Name = "txtBoxDatosSerialPort";
-            this.txtBoxDatosSerialPort.Size = new System.Drawing.Size(370, 249);
+            this.txtBoxDatosSerialPort.Size = new System.Drawing.Size(370, 281);
             this.txtBoxDatosSerialPort.TabIndex = 33;
-            // 
-            // btnRecibirDatos
-            // 
-            this.btnRecibirDatos.Location = new System.Drawing.Point(6, 21);
-            this.btnRecibirDatos.Name = "btnRecibirDatos";
-            this.btnRecibirDatos.Size = new System.Drawing.Size(101, 24);
-            this.btnRecibirDatos.TabIndex = 32;
-            this.btnRecibirDatos.Text = "Recibir Datos";
-            this.btnRecibirDatos.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.txtBoxDatosSerialPort);
-            this.groupBox1.Controls.Add(this.btnRecibirDatos);
             this.groupBox1.Location = new System.Drawing.Point(12, 104);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(382, 306);
@@ -169,6 +160,7 @@ namespace testform
             this.Controls.Add(this.gbPortSettings);
             this.Name = "FormROV";
             this.Text = "FormROV";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormROV_FormClosing);
             this.Load += new System.EventHandler(this.FormROV_Load);
             this.gbPortSettings.ResumeLayout(false);
             this.gbPortSettings.PerformLayout();
@@ -183,13 +175,12 @@ namespace testform
         private System.Windows.Forms.GroupBox gbPortSettings;
         private System.Windows.Forms.Label lblComPort;
         private System.Windows.Forms.ComboBox cbxPorts;
-        private System.Windows.Forms.Button btnRecibirDatos;
         private System.Windows.Forms.Button btnConectar;
         private System.Windows.Forms.TextBox txtBoxDatosSerialPort;
-        private System.Windows.Forms.Button btnBuscarPuertos;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox cbxBaudrate;
         private System.IO.Ports.SerialPort SpPuertos;
+        private System.Windows.Forms.Label lblPortsOk;
     }
 }
