@@ -161,6 +161,11 @@ namespace testform
 
         }
 
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
+        }
+
         //private void abrirForms(string camera)
         //{
         //    if (camera == null)

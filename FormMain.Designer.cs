@@ -29,7 +29,6 @@ namespace testform
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -46,8 +45,6 @@ namespace testform
             this.setupROVControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeMCCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.fontDialog1 = new System.Windows.Forms.FontDialog();
-            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -173,11 +170,6 @@ namespace testform
             this.acercaDeMCCToolStripMenuItem.Text = "Acerca de MCC";
             this.acercaDeMCCToolStripMenuItem.Click += new System.EventHandler(this.acercaDeMCCToolStripMenuItem_Click);
             // 
-            // notifyIcon1
-            // 
-            this.notifyIcon1.Text = "notifyIcon1";
-            this.notifyIcon1.Visible = true;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -209,8 +201,6 @@ namespace testform
         private System.Windows.Forms.ToolStripMenuItem setupIPCamToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem setupROVControlToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
-        private System.Windows.Forms.FontDialog fontDialog1;
-        private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.ToolStripMenuItem acercaDeMCCToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camara1ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camara2ToolStripMenuItem;
