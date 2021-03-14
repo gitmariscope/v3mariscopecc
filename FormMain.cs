@@ -161,7 +161,8 @@ namespace testform
 
         }
 
-        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+
+        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
         }

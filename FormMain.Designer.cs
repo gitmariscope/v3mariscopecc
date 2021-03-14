@@ -89,21 +89,21 @@ namespace testform
             // camara1ToolStripMenuItem1
             // 
             this.camara1ToolStripMenuItem1.Name = "camara1ToolStripMenuItem1";
-            this.camara1ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.camara1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.camara1ToolStripMenuItem1.Text = "Cámara 1";
             this.camara1ToolStripMenuItem1.Click += new System.EventHandler(this.camara1ToolStripMenuItem1_Click);
             // 
             // cámara2ToolStripMenuItem
             // 
             this.cámara2ToolStripMenuItem.Name = "cámara2ToolStripMenuItem";
-            this.cámara2ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cámara2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cámara2ToolStripMenuItem.Text = "Cámara 2";
             this.cámara2ToolStripMenuItem.Click += new System.EventHandler(this.cámara2ToolStripMenuItem_Click);
             // 
             // cámara3ToolStripMenuItem
             // 
             this.cámara3ToolStripMenuItem.Name = "cámara3ToolStripMenuItem";
-            this.cámara3ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cámara3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cámara3ToolStripMenuItem.Text = "Cámara 3";
             this.cámara3ToolStripMenuItem.Click += new System.EventHandler(this.cámara3ToolStripMenuItem_Click);
             // 
@@ -166,7 +166,7 @@ namespace testform
             // acercaDeMCCToolStripMenuItem
             // 
             this.acercaDeMCCToolStripMenuItem.Name = "acercaDeMCCToolStripMenuItem";
-            this.acercaDeMCCToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.acercaDeMCCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.acercaDeMCCToolStripMenuItem.Text = "Acerca de MCC";
             this.acercaDeMCCToolStripMenuItem.Click += new System.EventHandler(this.acercaDeMCCToolStripMenuItem_Click);
             // 

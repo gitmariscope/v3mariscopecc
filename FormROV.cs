@@ -23,14 +23,31 @@ namespace testform
         {
             InitializeComponent();
         }
-
         private void AccesoForm(string accion)
         {
             strBufferIn = accion;
-            //========================================
-            listBox1.Items.Add("-->"+strBufferIn);;
-            //========================================
 
+            // Convert the string into a byte[].
+            byte[] asciiBytes = Encoding.ASCII.GetBytes(strBufferIn);
+            
+            //===========IMPRIMIR EN LISTBOX=====================
+            //listBox1.Items.Add(String.Join(" ",asciiBytes));
+            //===========IMPRIMIR EN LISTBOX=====================
+            lblPosicion.Text = String.Join("",asciiBytes[79]);
+
+            lbltest.Text = String.Join(" ", asciiBytes);
+            
+            
+
+
+
+            //foreach (byte b in asciiBytes)
+            //{
+            //                     
+            //     listBox1.Items.Add("->" + b + " / ");
+            //    //lblTest.Text = b.ToString();
+            //}
+            //========================================
         }
         private void AccesoInterrupcion(string accion)
         {
@@ -120,35 +137,37 @@ namespace testform
 
         private void SpPuertos_DataReceived(object sender, SerialDataReceivedEventArgs eventArgs)
         {
-           
             if (SpPuertos.IsOpen)
             {
-                SerialPort sp = (SerialPort)sender;
+              //  SerialPort sp = (SerialPort)sender;
                 AccesoInterrupcion(SpPuertos.ReadExisting());
             }
             else
             {
                 MessageBox.Show("Error, el puerto COM no esta abierto");
             }
-
         }
 
         private void FormROV_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult dialogo = MessageBox.Show("¿Desea salir de Settings ROV?\nSi sale de Settings ROV se cerraran todos los puertos.", "Salir de Setting ROV",
-                                                    MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
-            if (dialogo == DialogResult.OK) { }
-            else 
+            if (SpPuertos.IsOpen)
+            {
+                DialogResult dialogo = MessageBox.Show("¿Desea salir de Settings ROV?\nSi cierra la ventana se cerraran todos los puertos.", "Puertos Abiertos",
+                                                        MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
+                if (dialogo == DialogResult.OK) { }
+                else 
+                {
+                    SpPuertos.Close();
+                    btnConectar.Text = "Conectar";
+                    e.Cancel = true;
+                }
+
+            }
+            else
             {
                 SpPuertos.Close();
-                btnConectar.Text = "Conectar";
-                e.Cancel = true;
             }
-        }
-
-        private void tsStatusCOM_Click(object sender, EventArgs e)
-        {
-
+           
         }
     }
 }
