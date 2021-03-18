@@ -35,14 +35,16 @@ namespace testform
             this.btnStop = new System.Windows.Forms.Button();
             this.btnRecord = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.axAxisMediaControl1 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
+            this.AMCfcam1 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
+            this.btnTest = new System.Windows.Forms.Button();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAxisMediaControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.btnTest);
             this.groupBox2.Controls.Add(this.btnSnap);
             this.groupBox2.Controls.Add(this.btnStop);
             this.groupBox2.Controls.Add(this.btnRecord);
@@ -82,7 +84,7 @@ namespace testform
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.axAxisMediaControl1);
+            this.groupBox1.Controls.Add(this.AMCfcam1);
             this.groupBox1.Location = new System.Drawing.Point(9, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 306);
@@ -90,14 +92,24 @@ namespace testform
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cámara 1";
             // 
-            // axAxisMediaControl1
+            // AMCfcam1
             // 
-            this.axAxisMediaControl1.Enabled = true;
-            this.axAxisMediaControl1.Location = new System.Drawing.Point(6, 19);
-            this.axAxisMediaControl1.Name = "axAxisMediaControl1";
-            this.axAxisMediaControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAxisMediaControl1.OcxState")));
-            this.axAxisMediaControl1.Size = new System.Drawing.Size(462, 272);
-            this.axAxisMediaControl1.TabIndex = 0;
+            this.AMCfcam1.Enabled = true;
+            this.AMCfcam1.Location = new System.Drawing.Point(6, 19);
+            this.AMCfcam1.Name = "AMCfcam1";
+            this.AMCfcam1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AMCfcam1.OcxState")));
+            this.AMCfcam1.Size = new System.Drawing.Size(462, 272);
+            this.AMCfcam1.TabIndex = 0;
+            // 
+            // btnTest
+            // 
+            this.btnTest.Location = new System.Drawing.Point(6, 43);
+            this.btnTest.Name = "btnTest";
+            this.btnTest.Size = new System.Drawing.Size(75, 31);
+            this.btnTest.TabIndex = 3;
+            this.btnTest.Text = "test";
+            this.btnTest.UseVisualStyleBackColor = true;
+            this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
             // fCam1
             // 
@@ -110,7 +122,7 @@ namespace testform
             this.Text = "Cámara 1";
             this.groupBox2.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAxisMediaControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -122,6 +134,7 @@ namespace testform
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnRecord;
         private System.Windows.Forms.GroupBox groupBox1;
-        private AxAXISMEDIACONTROLLib.AxAxisMediaControl axAxisMediaControl1;
+        public AxAXISMEDIACONTROLLib.AxAxisMediaControl AMCfcam1;
+        private System.Windows.Forms.Button btnTest;
     }
 }

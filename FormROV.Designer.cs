@@ -38,12 +38,13 @@ namespace testform
             this.cbxPorts = new System.Windows.Forms.ComboBox();
             this.btnConectar = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblPosicion = new System.Windows.Forms.Label();
+            this.lbltest = new System.Windows.Forms.Label();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.SpPuertos = new System.IO.Ports.SerialPort(this.components);
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tsStatusCOM = new System.Windows.Forms.ToolStripStatusLabel();
-            this.lbltest = new System.Windows.Forms.Label();
-            this.lblPosicion = new System.Windows.Forms.Label();
+            this.lblLuces = new System.Windows.Forms.Label();
             this.gbPortSettings.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -93,7 +94,7 @@ namespace testform
             this.cbxBaudrate.Name = "cbxBaudrate";
             this.cbxBaudrate.Size = new System.Drawing.Size(86, 21);
             this.cbxBaudrate.TabIndex = 36;
-            this.cbxBaudrate.Text = "9600";
+            this.cbxBaudrate.Text = "115200";
             // 
             // label1
             // 
@@ -135,57 +136,16 @@ namespace testform
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblLuces);
             this.groupBox1.Controls.Add(this.lblPosicion);
             this.groupBox1.Controls.Add(this.lbltest);
             this.groupBox1.Controls.Add(this.listBox1);
             this.groupBox1.Location = new System.Drawing.Point(12, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1122, 395);
+            this.groupBox1.Size = new System.Drawing.Size(841, 395);
             this.groupBox1.TabIndex = 35;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Recepción de datos";
-            // 
-            // listBox1
-            // 
-            this.listBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox1.ForeColor = System.Drawing.Color.LawnGreen;
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.IntegralHeight = false;
-            this.listBox1.Location = new System.Drawing.Point(14, 86);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(1102, 303);
-            this.listBox1.TabIndex = 35;
-            // 
-            // SpPuertos
-            // 
-            this.SpPuertos.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SpPuertos_DataReceived);
-            // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsStatusCOM});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 471);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1134, 22);
-            this.statusStrip1.TabIndex = 36;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // tsStatusCOM
-            // 
-            this.tsStatusCOM.Name = "tsStatusCOM";
-            this.tsStatusCOM.Size = new System.Drawing.Size(76, 17);
-            this.tsStatusCOM.Text = "tsStatusCOM";
-            this.tsStatusCOM.Visible = false;
-            // 
-            // lbltest
-            // 
-            this.lbltest.AutoSize = true;
-            this.lbltest.Location = new System.Drawing.Point(11, 55);
-            this.lbltest.Name = "lbltest";
-            this.lbltest.Size = new System.Drawing.Size(35, 13);
-            this.lbltest.TabIndex = 36;
-            this.lbltest.Text = "label2";
             // 
             // lblPosicion
             // 
@@ -196,11 +156,63 @@ namespace testform
             this.lblPosicion.TabIndex = 37;
             this.lblPosicion.Text = "label2";
             // 
+            // lbltest
+            // 
+            this.lbltest.AutoSize = true;
+            this.lbltest.Location = new System.Drawing.Point(11, 55);
+            this.lbltest.Name = "lbltest";
+            this.lbltest.Size = new System.Drawing.Size(35, 13);
+            this.lbltest.TabIndex = 36;
+            this.lbltest.Text = "label2";
+            // 
+            // listBox1
+            // 
+            this.listBox1.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.listBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox1.ForeColor = System.Drawing.Color.LawnGreen;
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.IntegralHeight = false;
+            this.listBox1.Location = new System.Drawing.Point(14, 86);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.Size = new System.Drawing.Size(820, 303);
+            this.listBox1.TabIndex = 35;
+            // 
+            // SpPuertos
+            // 
+            this.SpPuertos.BaudRate = 115200;
+            this.SpPuertos.DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(this.SpPuertos_DataReceived);
+            // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsStatusCOM});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 471);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(858, 22);
+            this.statusStrip1.TabIndex = 36;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tsStatusCOM
+            // 
+            this.tsStatusCOM.Name = "tsStatusCOM";
+            this.tsStatusCOM.Size = new System.Drawing.Size(76, 17);
+            this.tsStatusCOM.Text = "tsStatusCOM";
+            this.tsStatusCOM.Visible = false;
+            // 
+            // lblLuces
+            // 
+            this.lblLuces.AutoSize = true;
+            this.lblLuces.Location = new System.Drawing.Point(118, 28);
+            this.lblLuces.Name = "lblLuces";
+            this.lblLuces.Size = new System.Drawing.Size(32, 13);
+            this.lblLuces.TabIndex = 38;
+            this.lblLuces.Text = "luces";
+            // 
             // FormROV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1134, 493);
+            this.ClientSize = new System.Drawing.Size(858, 493);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.gbPortSettings);
@@ -235,5 +247,6 @@ namespace testform
         private System.Windows.Forms.ToolStripStatusLabel tsStatusCOM;
         private System.Windows.Forms.Label lbltest;
         private System.Windows.Forms.Label lblPosicion;
+        private System.Windows.Forms.Label lblLuces;
     }
 }

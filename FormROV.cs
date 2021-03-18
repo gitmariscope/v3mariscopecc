@@ -8,7 +8,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
-using System.Timers;
 
 namespace testform
 {
@@ -27,26 +26,41 @@ namespace testform
         {
             strBufferIn = accion;
 
+            while (strBufferIn.StartsWith("PC"))
+            {
+                string str = strBufferIn.Substring(0, 86);
+                int n = Convert.ToInt32(str.Length);
+                byte[] asciiBytes = Encoding.ASCII.GetBytes(strBufferIn);
+                
+                if (str.StartsWith("PC"))
+                {
+                    float ns = Convert.ToInt32(str[31]);
+                    ns = (ns / 255) * 100;
+
+                    lblLuces.Text = String.Join(" ", ns);
+                    lbltest.Text = String.Join(" ", asciiBytes);
+                    //listBox1.Items.Add(String.Join(" ", asciiBytes));
+                   // lblPosicion.Text = String.Join("",asciiBytes[79]);
+                    //listBox1.Items.Add(str);
+                    //lblPosicion.Text = n.ToString();
+
+                    // foreach (byte b in asciiBytes)
+                    // {
+                    //     listBox1.Items.Add("->" + b + " / ");
+                    //     //lblTest.Text = b.ToString();
+                    // }
+                }
+                else
+                {
+                    MessageBox.Show("error");
+                }
+                break;
+            }
             // Convert the string into a byte[].
-            byte[] asciiBytes = Encoding.ASCII.GetBytes(strBufferIn);
-            
             //===========IMPRIMIR EN LISTBOX=====================
-            //listBox1.Items.Add(String.Join(" ",asciiBytes));
+            // listBox1.Items.Add(String.Join("  ",asciiBytes));
             //===========IMPRIMIR EN LISTBOX=====================
-            lblPosicion.Text = String.Join("",asciiBytes[79]);
-
-            lbltest.Text = String.Join(" ", asciiBytes);
-            
-            
-
-
-
-            //foreach (byte b in asciiBytes)
-            //{
-            //                     
-            //     listBox1.Items.Add("->" + b + " / ");
-            //    //lblTest.Text = b.ToString();
-            //}
+            //  lblPosicion.Text = String.Join("",asciiBytes[79]);
             //========================================
         }
         private void AccesoInterrupcion(string accion)
@@ -88,7 +102,7 @@ namespace testform
 
         private void FormROV_Load(object sender, EventArgs e)
         {
-            strBufferIn = "";
+            strBufferIn  = "";
             strBufferOut = "";
             btnConectar.Enabled = false;
             CargarPuertos();
@@ -100,13 +114,12 @@ namespace testform
             {
                 if (btnConectar.Text == "Conectar")
                 {
-
-                    SpPuertos.BaudRate = Convert.ToInt32(cbxBaudrate.Text);
-                    SpPuertos.DataBits = 8;
-                    SpPuertos.Parity = Parity.None;
-                    SpPuertos.StopBits = StopBits.One;
+                    SpPuertos.BaudRate  = Convert.ToInt32(cbxBaudrate.Text);
+                    SpPuertos.DataBits  = 8;
+                    SpPuertos.Parity    = Parity.None;
+                    SpPuertos.StopBits  = StopBits.One;
                     SpPuertos.Handshake = Handshake.None;
-                    SpPuertos.PortName = cbxPorts.Text.ToString();
+                    SpPuertos.PortName  = cbxPorts.Text.ToString();
                     try
                     {
                         SpPuertos.Open();
@@ -139,15 +152,15 @@ namespace testform
         {
             if (SpPuertos.IsOpen)
             {
-              //  SerialPort sp = (SerialPort)sender;
+                //  SerialPort sp = (SerialPort)sender;
                 AccesoInterrupcion(SpPuertos.ReadExisting());
+
             }
             else
             {
                 MessageBox.Show("Error, el puerto COM no esta abierto");
             }
         }
-
         private void FormROV_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (SpPuertos.IsOpen)

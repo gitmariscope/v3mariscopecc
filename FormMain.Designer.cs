@@ -59,7 +59,7 @@ namespace testform
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1159, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(846, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -130,21 +130,21 @@ namespace testform
             // camara1ToolStripMenuItem
             // 
             this.camara1ToolStripMenuItem.Name = "camara1ToolStripMenuItem";
-            this.camara1ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.camara1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.camara1ToolStripMenuItem.Text = "Camera 1 ";
             this.camara1ToolStripMenuItem.Click += new System.EventHandler(this.camara1ToolStripMenuItem_Click);
             // 
             // camara2ToolStripMenuItem
             // 
             this.camara2ToolStripMenuItem.Name = "camara2ToolStripMenuItem";
-            this.camara2ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.camara2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.camara2ToolStripMenuItem.Text = "Camera 2";
             this.camara2ToolStripMenuItem.Click += new System.EventHandler(this.camara2ToolStripMenuItem_Click);
             // 
             // camara3ToolStripMenuItem
             // 
             this.camara3ToolStripMenuItem.Name = "camara3ToolStripMenuItem";
-            this.camara3ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.camara3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.camara3ToolStripMenuItem.Text = "Camera 3";
             this.camara3ToolStripMenuItem.Click += new System.EventHandler(this.camara3ToolStripMenuItem_Click);
             // 
@@ -166,7 +166,7 @@ namespace testform
             // acercaDeMCCToolStripMenuItem
             // 
             this.acercaDeMCCToolStripMenuItem.Name = "acercaDeMCCToolStripMenuItem";
-            this.acercaDeMCCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.acercaDeMCCToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
             this.acercaDeMCCToolStripMenuItem.Text = "Acerca de MCC";
             this.acercaDeMCCToolStripMenuItem.Click += new System.EventHandler(this.acercaDeMCCToolStripMenuItem_Click);
             // 
@@ -174,7 +174,7 @@ namespace testform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1159, 660);
+            this.ClientSize = new System.Drawing.Size(846, 464);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

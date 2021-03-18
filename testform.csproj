@@ -94,6 +94,7 @@
     <Compile Include="FormROV.Designer.cs">
       <DependentUpon>FormROV.cs</DependentUpon>
     </Compile>
+    <Compile Include="models\camera.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="fCam1.resx">

@@ -31,25 +31,34 @@ namespace testform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fCam3));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.AMCfcam3 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.axAxisMediaControl1 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
-            this.btnRecord = new System.Windows.Forms.Button();
-            this.btnStop = new System.Windows.Forms.Button();
             this.btnSnap = new System.Windows.Forms.Button();
+            this.btnStop = new System.Windows.Forms.Button();
+            this.btnRecord = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AMCfcam3)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.axAxisMediaControl1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.axAxisMediaControl1);
+            this.groupBox1.Controls.Add(this.AMCfcam3);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(474, 306);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Cámara 3";
+            // 
+            // AMCfcam3
+            // 
+            this.AMCfcam3.Enabled = true;
+            this.AMCfcam3.Location = new System.Drawing.Point(6, 19);
+            this.AMCfcam3.Name = "AMCfcam3";
+            this.AMCfcam3.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AMCfcam3.OcxState")));
+            this.AMCfcam3.Size = new System.Drawing.Size(462, 272);
+            this.AMCfcam3.TabIndex = 0;
             // 
             // groupBox2
             // 
@@ -63,23 +72,14 @@ namespace testform
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Control";
             // 
-            // axAxisMediaControl1
+            // btnSnap
             // 
-            this.axAxisMediaControl1.Enabled = true;
-            this.axAxisMediaControl1.Location = new System.Drawing.Point(6, 19);
-            this.axAxisMediaControl1.Name = "axAxisMediaControl1";
-            this.axAxisMediaControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axAxisMediaControl1.OcxState")));
-            this.axAxisMediaControl1.Size = new System.Drawing.Size(462, 272);
-            this.axAxisMediaControl1.TabIndex = 0;
-            // 
-            // btnRecord
-            // 
-            this.btnRecord.Location = new System.Drawing.Point(118, 43);
-            this.btnRecord.Name = "btnRecord";
-            this.btnRecord.Size = new System.Drawing.Size(75, 31);
-            this.btnRecord.TabIndex = 0;
-            this.btnRecord.Text = "Record";
-            this.btnRecord.UseVisualStyleBackColor = true;
+            this.btnSnap.Location = new System.Drawing.Point(280, 43);
+            this.btnSnap.Name = "btnSnap";
+            this.btnSnap.Size = new System.Drawing.Size(75, 31);
+            this.btnSnap.TabIndex = 2;
+            this.btnSnap.Text = "Snapshot";
+            this.btnSnap.UseVisualStyleBackColor = true;
             // 
             // btnStop
             // 
@@ -90,14 +90,14 @@ namespace testform
             this.btnStop.Text = "Stop";
             this.btnStop.UseVisualStyleBackColor = true;
             // 
-            // btnSnap
+            // btnRecord
             // 
-            this.btnSnap.Location = new System.Drawing.Point(280, 43);
-            this.btnSnap.Name = "btnSnap";
-            this.btnSnap.Size = new System.Drawing.Size(75, 31);
-            this.btnSnap.TabIndex = 2;
-            this.btnSnap.Text = "Snapshot";
-            this.btnSnap.UseVisualStyleBackColor = true;
+            this.btnRecord.Location = new System.Drawing.Point(118, 43);
+            this.btnRecord.Name = "btnRecord";
+            this.btnRecord.Size = new System.Drawing.Size(75, 31);
+            this.btnRecord.TabIndex = 0;
+            this.btnRecord.Text = "Record";
+            this.btnRecord.UseVisualStyleBackColor = true;
             // 
             // fCam3
             // 
@@ -109,8 +109,8 @@ namespace testform
             this.Name = "fCam3";
             this.Text = "Cámara 3";
             this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AMCfcam3)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.axAxisMediaControl1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,10 +118,10 @@ namespace testform
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private AxAXISMEDIACONTROLLib.AxAxisMediaControl axAxisMediaControl1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Button btnSnap;
         private System.Windows.Forms.Button btnStop;
         private System.Windows.Forms.Button btnRecord;
+        public AxAXISMEDIACONTROLLib.AxAxisMediaControl AMCfcam3;
     }
 }
