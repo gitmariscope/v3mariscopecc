@@ -29,82 +29,561 @@ namespace testform
         /// </summary>
         private void InitializeComponent()
         {
-            this.tabControlSetCam1 = new System.Windows.Forms.TabControl();
-            this.Stream = new System.Windows.Forms.TabPage();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.btnSaveStrCam1 = new System.Windows.Forms.Button();
-            this.trkbcam1Compression = new System.Windows.Forms.TrackBar();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtcam1resolution = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.Image = new System.Windows.Forms.TabPage();
-            this.btnSaveImaCam1 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.trackBar6 = new System.Windows.Forms.TrackBar();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.trackBar5 = new System.Windows.Forms.TrackBar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.trackBar4 = new System.Windows.Forms.TrackBar();
-            this.label5 = new System.Windows.Forms.Label();
-            this.trackBar3 = new System.Windows.Forms.TrackBar();
-            this.label4 = new System.Windows.Forms.Label();
-            this.trackBar2 = new System.Windows.Forms.TrackBar();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSetCam1));
+            this.btnSaveSetting = new System.Windows.Forms.Button();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.AMCfcam1 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
             this.Overlay = new System.Windows.Forms.TabPage();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSaveOverCam1 = new System.Windows.Forms.Button();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox10 = new System.Windows.Forms.TextBox();
+            this.chkTime = new System.Windows.Forms.CheckBox();
+            this.chkDate = new System.Windows.Forms.CheckBox();
             this.label16 = new System.Windows.Forms.Label();
-            this.textBox8 = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
-            this.textBox9 = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtOverlay = new System.Windows.Forms.TextBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Image = new System.Windows.Forms.TabPage();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lblExposureValue = new System.Windows.Forms.Label();
+            this.cbxMaxGain = new System.Windows.Forms.ComboBox();
+            this.cbxMaxShutter = new System.Windows.Forms.ComboBox();
+            this.cbxExposureZone = new System.Windows.Forms.ComboBox();
+            this.cbxExposureControl = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.tkbExposureValue = new System.Windows.Forms.TrackBar();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbxWhiteBalance = new System.Windows.Forms.ComboBox();
+            this.label7 = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblSharpness = new System.Windows.Forms.Label();
+            this.lblSaturation = new System.Windows.Forms.Label();
+            this.lblContrast = new System.Windows.Forms.Label();
+            this.lblBright = new System.Windows.Forms.Label();
+            this.tkbSharpness = new System.Windows.Forms.TrackBar();
+            this.label6 = new System.Windows.Forms.Label();
+            this.tkbSaturation = new System.Windows.Forms.TrackBar();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tkbContrast = new System.Windows.Forms.TrackBar();
+            this.label4 = new System.Windows.Forms.Label();
+            this.tkbBrightness = new System.Windows.Forms.TrackBar();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Stream = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cbxResolution = new System.Windows.Forms.ComboBox();
             this.lblCompression = new System.Windows.Forms.Label();
-            this.tabControlSetCam1.SuspendLayout();
+            this.trkbcam1Compression = new System.Windows.Forms.TrackBar();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.tabControlSetCam1 = new System.Windows.Forms.TabControl();
+            this.button1 = new System.Windows.Forms.Button();
+            this.groupBox6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).BeginInit();
+            this.Overlay.SuspendLayout();
+            this.groupBox5.SuspendLayout();
+            this.Image.SuspendLayout();
+            this.groupBox4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbExposureValue)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbSharpness)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbSaturation)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbContrast)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbBrightness)).BeginInit();
             this.Stream.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkbcam1Compression)).BeginInit();
-            this.Image.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).BeginInit();
-            this.groupBox3.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
-            this.Overlay.SuspendLayout();
-            this.groupBox5.SuspendLayout();
+            this.tabControlSetCam1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // tabControlSetCam1
+            // btnSaveSetting
             // 
-            this.tabControlSetCam1.Controls.Add(this.Stream);
-            this.tabControlSetCam1.Controls.Add(this.Image);
-            this.tabControlSetCam1.Controls.Add(this.Overlay);
-            this.tabControlSetCam1.Location = new System.Drawing.Point(12, 12);
-            this.tabControlSetCam1.Name = "tabControlSetCam1";
-            this.tabControlSetCam1.SelectedIndex = 0;
-            this.tabControlSetCam1.Size = new System.Drawing.Size(302, 426);
-            this.tabControlSetCam1.TabIndex = 1;
+            this.btnSaveSetting.Location = new System.Drawing.Point(333, 397);
+            this.btnSaveSetting.Name = "btnSaveSetting";
+            this.btnSaveSetting.Size = new System.Drawing.Size(78, 37);
+            this.btnSaveSetting.TabIndex = 3;
+            this.btnSaveSetting.Text = "Guardar Cambios";
+            this.btnSaveSetting.UseVisualStyleBackColor = true;
+            this.btnSaveSetting.Click += new System.EventHandler(this.btnSaveSetting_Click);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.AMCfcam1);
+            this.groupBox6.Location = new System.Drawing.Point(327, 12);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(474, 379);
+            this.groupBox6.TabIndex = 6;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Cámara 1";
+            // 
+            // AMCfcam1
+            // 
+            this.AMCfcam1.Enabled = true;
+            this.AMCfcam1.Location = new System.Drawing.Point(6, 22);
+            this.AMCfcam1.Name = "AMCfcam1";
+            this.AMCfcam1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AMCfcam1.OcxState")));
+            this.AMCfcam1.Size = new System.Drawing.Size(462, 351);
+            this.AMCfcam1.TabIndex = 0;
+            // 
+            // Overlay
+            // 
+            this.Overlay.Controls.Add(this.groupBox5);
+            this.Overlay.Location = new System.Drawing.Point(4, 22);
+            this.Overlay.Name = "Overlay";
+            this.Overlay.Padding = new System.Windows.Forms.Padding(3);
+            this.Overlay.Size = new System.Drawing.Size(294, 400);
+            this.Overlay.TabIndex = 2;
+            this.Overlay.Text = "Overlay";
+            this.Overlay.UseVisualStyleBackColor = true;
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.comboBox3);
+            this.groupBox5.Controls.Add(this.comboBox2);
+            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.chkTime);
+            this.groupBox5.Controls.Add(this.chkDate);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.label14);
+            this.groupBox5.Controls.Add(this.label15);
+            this.groupBox5.Controls.Add(this.label13);
+            this.groupBox5.Controls.Add(this.txtOverlay);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(282, 202);
+            this.groupBox5.TabIndex = 0;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "Overlay Settings";
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Items.AddRange(new object[] {
+            "white",
+            "black"});
+            this.comboBox3.Location = new System.Drawing.Point(100, 98);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(113, 21);
+            this.comboBox3.TabIndex = 27;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Top",
+            "Bottom"});
+            this.comboBox2.Location = new System.Drawing.Point(100, 71);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(113, 21);
+            this.comboBox2.TabIndex = 26;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "white",
+            "black",
+            "transparent",
+            "semitransparent"});
+            this.comboBox1.Location = new System.Drawing.Point(100, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(113, 21);
+            this.comboBox1.TabIndex = 1;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(17, 123);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(77, 13);
+            this.label17.TabIndex = 25;
+            this.label17.Text = "Date and Time";
+            // 
+            // chkTime
+            // 
+            this.chkTime.AutoSize = true;
+            this.chkTime.Location = new System.Drawing.Point(100, 146);
+            this.chkTime.Name = "chkTime";
+            this.chkTime.Size = new System.Drawing.Size(87, 17);
+            this.chkTime.TabIndex = 24;
+            this.chkTime.Text = "Include Time";
+            this.chkTime.UseVisualStyleBackColor = true;
+            this.chkTime.CheckedChanged += new System.EventHandler(this.chkTime_CheckedChanged);
+            // 
+            // chkDate
+            // 
+            this.chkDate.AutoSize = true;
+            this.chkDate.Location = new System.Drawing.Point(100, 123);
+            this.chkDate.Name = "chkDate";
+            this.chkDate.Size = new System.Drawing.Size(87, 17);
+            this.chkDate.TabIndex = 23;
+            this.chkDate.Text = "Include Date";
+            this.chkDate.UseVisualStyleBackColor = true;
+            this.chkDate.CheckedChanged += new System.EventHandler(this.chkDate_CheckedChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(39, 100);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(55, 13);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Color Text";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(36, 74);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(58, 13);
+            this.label14.TabIndex = 19;
+            this.label14.Text = "Place Text";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(8, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(92, 13);
+            this.label15.TabIndex = 17;
+            this.label15.Text = "Background Color";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(66, 22);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(28, 13);
+            this.label13.TabIndex = 1;
+            this.label13.Text = "Text";
+            // 
+            // txtOverlay
+            // 
+            this.txtOverlay.Location = new System.Drawing.Point(100, 19);
+            this.txtOverlay.Name = "txtOverlay";
+            this.txtOverlay.Size = new System.Drawing.Size(176, 20);
+            this.txtOverlay.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(417, 397);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 37);
+            this.button2.TabIndex = 5;
+            this.button2.Text = "Restablecer";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // Image
+            // 
+            this.Image.Controls.Add(this.groupBox4);
+            this.Image.Controls.Add(this.groupBox3);
+            this.Image.Controls.Add(this.groupBox2);
+            this.Image.Location = new System.Drawing.Point(4, 22);
+            this.Image.Name = "Image";
+            this.Image.Padding = new System.Windows.Forms.Padding(3);
+            this.Image.Size = new System.Drawing.Size(294, 400);
+            this.Image.TabIndex = 1;
+            this.Image.Text = "Image";
+            this.Image.UseVisualStyleBackColor = true;
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lblExposureValue);
+            this.groupBox4.Controls.Add(this.cbxMaxGain);
+            this.groupBox4.Controls.Add(this.cbxMaxShutter);
+            this.groupBox4.Controls.Add(this.cbxExposureZone);
+            this.groupBox4.Controls.Add(this.cbxExposureControl);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.tkbExposureValue);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Location = new System.Drawing.Point(6, 181);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(282, 157);
+            this.groupBox4.TabIndex = 2;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "Exposure Settings";
+            // 
+            // lblExposureValue
+            // 
+            this.lblExposureValue.AutoSize = true;
+            this.lblExposureValue.Location = new System.Drawing.Point(247, 71);
+            this.lblExposureValue.Name = "lblExposureValue";
+            this.lblExposureValue.Size = new System.Drawing.Size(13, 13);
+            this.lblExposureValue.TabIndex = 15;
+            this.lblExposureValue.Text = "0";
+            // 
+            // cbxMaxGain
+            // 
+            this.cbxMaxGain.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMaxGain.FormattingEnabled = true;
+            this.cbxMaxGain.Location = new System.Drawing.Point(106, 127);
+            this.cbxMaxGain.Name = "cbxMaxGain";
+            this.cbxMaxGain.Size = new System.Drawing.Size(69, 21);
+            this.cbxMaxGain.TabIndex = 24;
+            // 
+            // cbxMaxShutter
+            // 
+            this.cbxMaxShutter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxMaxShutter.FormattingEnabled = true;
+            this.cbxMaxShutter.Location = new System.Drawing.Point(106, 103);
+            this.cbxMaxShutter.Name = "cbxMaxShutter";
+            this.cbxMaxShutter.Size = new System.Drawing.Size(69, 21);
+            this.cbxMaxShutter.TabIndex = 23;
+            // 
+            // cbxExposureZone
+            // 
+            this.cbxExposureZone.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxExposureZone.FormattingEnabled = true;
+            this.cbxExposureZone.Location = new System.Drawing.Point(106, 44);
+            this.cbxExposureZone.Name = "cbxExposureZone";
+            this.cbxExposureZone.Size = new System.Drawing.Size(142, 21);
+            this.cbxExposureZone.TabIndex = 22;
+            // 
+            // cbxExposureControl
+            // 
+            this.cbxExposureControl.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxExposureControl.FormattingEnabled = true;
+            this.cbxExposureControl.Location = new System.Drawing.Point(106, 19);
+            this.cbxExposureControl.Name = "cbxExposureControl";
+            this.cbxExposureControl.Size = new System.Drawing.Size(142, 21);
+            this.cbxExposureControl.TabIndex = 21;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(48, 130);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(52, 13);
+            this.label12.TabIndex = 19;
+            this.label12.Text = "Max Gain";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(36, 106);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 13);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Max Shutter";
+            // 
+            // tkbExposureValue
+            // 
+            this.tkbExposureValue.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tkbExposureValue.Location = new System.Drawing.Point(85, 71);
+            this.tkbExposureValue.Maximum = 100;
+            this.tkbExposureValue.Name = "tkbExposureValue";
+            this.tkbExposureValue.Size = new System.Drawing.Size(163, 45);
+            this.tkbExposureValue.TabIndex = 11;
+            this.tkbExposureValue.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tkbExposureValue.Scroll += new System.EventHandler(this.tkbExposureValue_Scroll);
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 71);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(81, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "Exposure Value";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(21, 48);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(79, 13);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Exposure Zone";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(14, 22);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(87, 13);
+            this.label8.TabIndex = 13;
+            this.label8.Text = "Exposure Control";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.cbxWhiteBalance);
+            this.groupBox3.Controls.Add(this.label7);
+            this.groupBox3.Location = new System.Drawing.Point(6, 132);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(282, 43);
+            this.groupBox3.TabIndex = 1;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "White Balance";
+            // 
+            // cbxWhiteBalance
+            // 
+            this.cbxWhiteBalance.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxWhiteBalance.FormattingEnabled = true;
+            this.cbxWhiteBalance.Location = new System.Drawing.Point(106, 16);
+            this.cbxWhiteBalance.Name = "cbxWhiteBalance";
+            this.cbxWhiteBalance.Size = new System.Drawing.Size(142, 21);
+            this.cbxWhiteBalance.TabIndex = 12;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(23, 19);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(77, 13);
+            this.label7.TabIndex = 11;
+            this.label7.Text = "White Balance";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lblSharpness);
+            this.groupBox2.Controls.Add(this.lblSaturation);
+            this.groupBox2.Controls.Add(this.lblContrast);
+            this.groupBox2.Controls.Add(this.lblBright);
+            this.groupBox2.Controls.Add(this.tkbSharpness);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.tkbSaturation);
+            this.groupBox2.Controls.Add(this.label5);
+            this.groupBox2.Controls.Add(this.tkbContrast);
+            this.groupBox2.Controls.Add(this.label4);
+            this.groupBox2.Controls.Add(this.tkbBrightness);
+            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Location = new System.Drawing.Point(6, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(282, 120);
+            this.groupBox2.TabIndex = 0;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Image Settings";
+            // 
+            // lblSharpness
+            // 
+            this.lblSharpness.AutoSize = true;
+            this.lblSharpness.Location = new System.Drawing.Point(247, 94);
+            this.lblSharpness.Name = "lblSharpness";
+            this.lblSharpness.Size = new System.Drawing.Size(13, 13);
+            this.lblSharpness.TabIndex = 14;
+            this.lblSharpness.Text = "0";
+            // 
+            // lblSaturation
+            // 
+            this.lblSaturation.AutoSize = true;
+            this.lblSaturation.Location = new System.Drawing.Point(247, 70);
+            this.lblSaturation.Name = "lblSaturation";
+            this.lblSaturation.Size = new System.Drawing.Size(13, 13);
+            this.lblSaturation.TabIndex = 13;
+            this.lblSaturation.Text = "0";
+            // 
+            // lblContrast
+            // 
+            this.lblContrast.AutoSize = true;
+            this.lblContrast.Location = new System.Drawing.Point(247, 43);
+            this.lblContrast.Name = "lblContrast";
+            this.lblContrast.Size = new System.Drawing.Size(13, 13);
+            this.lblContrast.TabIndex = 12;
+            this.lblContrast.Text = "0";
+            // 
+            // lblBright
+            // 
+            this.lblBright.AutoSize = true;
+            this.lblBright.Location = new System.Drawing.Point(247, 19);
+            this.lblBright.Name = "lblBright";
+            this.lblBright.Size = new System.Drawing.Size(13, 13);
+            this.lblBright.TabIndex = 11;
+            this.lblBright.Text = "0";
+            // 
+            // tkbSharpness
+            // 
+            this.tkbSharpness.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tkbSharpness.Location = new System.Drawing.Point(85, 94);
+            this.tkbSharpness.Maximum = 100;
+            this.tkbSharpness.Name = "tkbSharpness";
+            this.tkbSharpness.Size = new System.Drawing.Size(163, 45);
+            this.tkbSharpness.TabIndex = 9;
+            this.tkbSharpness.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tkbSharpness.Scroll += new System.EventHandler(this.tkbSharpness_Scroll);
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(22, 94);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(57, 13);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Sharpness";
+            // 
+            // tkbSaturation
+            // 
+            this.tkbSaturation.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tkbSaturation.Location = new System.Drawing.Point(85, 70);
+            this.tkbSaturation.Maximum = 100;
+            this.tkbSaturation.Name = "tkbSaturation";
+            this.tkbSaturation.Size = new System.Drawing.Size(163, 45);
+            this.tkbSaturation.TabIndex = 7;
+            this.tkbSaturation.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tkbSaturation.Scroll += new System.EventHandler(this.tkbSaturation_Scroll);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(25, 70);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(55, 13);
+            this.label5.TabIndex = 8;
+            this.label5.Text = "Saturation";
+            // 
+            // tkbContrast
+            // 
+            this.tkbContrast.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tkbContrast.Location = new System.Drawing.Point(85, 43);
+            this.tkbContrast.Maximum = 100;
+            this.tkbContrast.Name = "tkbContrast";
+            this.tkbContrast.Size = new System.Drawing.Size(163, 45);
+            this.tkbContrast.TabIndex = 5;
+            this.tkbContrast.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tkbContrast.Scroll += new System.EventHandler(this.tkbContrast_Scroll);
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 43);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(46, 13);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Contrast";
+            // 
+            // tkbBrightness
+            // 
+            this.tkbBrightness.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.tkbBrightness.Location = new System.Drawing.Point(85, 19);
+            this.tkbBrightness.Maximum = 100;
+            this.tkbBrightness.Name = "tkbBrightness";
+            this.tkbBrightness.Size = new System.Drawing.Size(163, 45);
+            this.tkbBrightness.TabIndex = 3;
+            this.tkbBrightness.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.tkbBrightness.Scroll += new System.EventHandler(this.tkbBrightness_Scroll);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 19);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 13);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Brightness";
             // 
             // Stream
             // 
@@ -119,11 +598,10 @@ namespace testform
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.cbxResolution);
             this.groupBox1.Controls.Add(this.lblCompression);
-            this.groupBox1.Controls.Add(this.btnSaveStrCam1);
             this.groupBox1.Controls.Add(this.trkbcam1Compression);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.txtcam1resolution);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
@@ -132,15 +610,23 @@ namespace testform
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings Stream Camera 1";
             // 
-            // btnSaveStrCam1
+            // cbxResolution
             // 
-            this.btnSaveStrCam1.Location = new System.Drawing.Point(204, 362);
-            this.btnSaveStrCam1.Name = "btnSaveStrCam1";
-            this.btnSaveStrCam1.Size = new System.Drawing.Size(78, 26);
-            this.btnSaveStrCam1.TabIndex = 3;
-            this.btnSaveStrCam1.Text = "Save";
-            this.btnSaveStrCam1.UseVisualStyleBackColor = true;
-            this.btnSaveStrCam1.Click += new System.EventHandler(this.btnSaveStrCam1_Click);
+            this.cbxResolution.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxResolution.FormattingEnabled = true;
+            this.cbxResolution.Location = new System.Drawing.Point(79, 92);
+            this.cbxResolution.Name = "cbxResolution";
+            this.cbxResolution.Size = new System.Drawing.Size(162, 21);
+            this.cbxResolution.TabIndex = 5;
+            // 
+            // lblCompression
+            // 
+            this.lblCompression.AutoSize = true;
+            this.lblCompression.Location = new System.Drawing.Point(247, 38);
+            this.lblCompression.Name = "lblCompression";
+            this.lblCompression.Size = new System.Drawing.Size(13, 13);
+            this.lblCompression.TabIndex = 4;
+            this.lblCompression.Text = "0";
             // 
             // trkbcam1Compression
             // 
@@ -162,13 +648,6 @@ namespace testform
             this.label3.TabIndex = 2;
             this.label3.Text = "Compression";
             // 
-            // txtcam1resolution
-            // 
-            this.txtcam1resolution.Location = new System.Drawing.Point(78, 89);
-            this.txtcam1resolution.Name = "txtcam1resolution";
-            this.txtcam1resolution.Size = new System.Drawing.Size(163, 20);
-            this.txtcam1resolution.TabIndex = 0;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -178,481 +657,121 @@ namespace testform
             this.label2.TabIndex = 1;
             this.label2.Text = "Resolution";
             // 
-            // Image
-            // 
-            this.Image.Controls.Add(this.btnSaveImaCam1);
-            this.Image.Controls.Add(this.groupBox4);
-            this.Image.Controls.Add(this.groupBox3);
-            this.Image.Controls.Add(this.groupBox2);
-            this.Image.Location = new System.Drawing.Point(4, 22);
-            this.Image.Name = "Image";
-            this.Image.Padding = new System.Windows.Forms.Padding(3);
-            this.Image.Size = new System.Drawing.Size(294, 400);
-            this.Image.TabIndex = 1;
-            this.Image.Text = "Image";
-            this.Image.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveImaCam1
-            // 
-            this.btnSaveImaCam1.Location = new System.Drawing.Point(210, 368);
-            this.btnSaveImaCam1.Name = "btnSaveImaCam1";
-            this.btnSaveImaCam1.Size = new System.Drawing.Size(78, 26);
-            this.btnSaveImaCam1.TabIndex = 3;
-            this.btnSaveImaCam1.Text = "Save";
-            this.btnSaveImaCam1.UseVisualStyleBackColor = true;
-            // 
-            // groupBox4
-            // 
-            this.groupBox4.Controls.Add(this.textBox6);
-            this.groupBox4.Controls.Add(this.label12);
-            this.groupBox4.Controls.Add(this.textBox5);
-            this.groupBox4.Controls.Add(this.label11);
-            this.groupBox4.Controls.Add(this.trackBar6);
-            this.groupBox4.Controls.Add(this.label10);
-            this.groupBox4.Controls.Add(this.textBox4);
-            this.groupBox4.Controls.Add(this.label9);
-            this.groupBox4.Controls.Add(this.textBox3);
-            this.groupBox4.Controls.Add(this.label8);
-            this.groupBox4.Location = new System.Drawing.Point(6, 181);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(282, 171);
-            this.groupBox4.TabIndex = 2;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Exposure Settings";
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(106, 130);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(49, 20);
-            this.textBox6.TabIndex = 20;
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(48, 130);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(52, 13);
-            this.label12.TabIndex = 19;
-            this.label12.Text = "Max Gain";
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(106, 103);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(49, 20);
-            this.textBox5.TabIndex = 18;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(36, 106);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 13);
-            this.label11.TabIndex = 17;
-            this.label11.Text = "Max Shutter";
-            // 
-            // trackBar6
-            // 
-            this.trackBar6.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar6.Location = new System.Drawing.Point(85, 71);
-            this.trackBar6.Name = "trackBar6";
-            this.trackBar6.Size = new System.Drawing.Size(163, 45);
-            this.trackBar6.TabIndex = 11;
-            this.trackBar6.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 71);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(81, 13);
-            this.label10.TabIndex = 12;
-            this.label10.Text = "Exposure Value";
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(106, 45);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(142, 20);
-            this.textBox4.TabIndex = 16;
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(21, 48);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(79, 13);
-            this.label9.TabIndex = 15;
-            this.label9.Text = "Exposure Zone";
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(106, 19);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(142, 20);
-            this.textBox3.TabIndex = 14;
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(14, 22);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(87, 13);
-            this.label8.TabIndex = 13;
-            this.label8.Text = "Exposure Control";
-            // 
-            // groupBox3
-            // 
-            this.groupBox3.Controls.Add(this.textBox2);
-            this.groupBox3.Controls.Add(this.label7);
-            this.groupBox3.Location = new System.Drawing.Point(6, 132);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(282, 43);
-            this.groupBox3.TabIndex = 1;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "White Balance";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(106, 16);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(142, 20);
-            this.textBox2.TabIndex = 12;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 19);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 13);
-            this.label7.TabIndex = 11;
-            this.label7.Text = "White Balance";
-            // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.trackBar5);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.trackBar4);
-            this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.trackBar3);
-            this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.trackBar2);
-            this.groupBox2.Controls.Add(this.label1);
-            this.groupBox2.Location = new System.Drawing.Point(6, 6);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(282, 120);
-            this.groupBox2.TabIndex = 0;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Image Settings";
-            // 
-            // trackBar5
-            // 
-            this.trackBar5.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar5.Location = new System.Drawing.Point(85, 94);
-            this.trackBar5.Name = "trackBar5";
-            this.trackBar5.Size = new System.Drawing.Size(163, 45);
-            this.trackBar5.TabIndex = 9;
-            this.trackBar5.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 94);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(57, 13);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Sharpness";
-            // 
-            // trackBar4
-            // 
-            this.trackBar4.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar4.Location = new System.Drawing.Point(85, 70);
-            this.trackBar4.Name = "trackBar4";
-            this.trackBar4.Size = new System.Drawing.Size(163, 45);
-            this.trackBar4.TabIndex = 7;
-            this.trackBar4.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(25, 70);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(55, 13);
-            this.label5.TabIndex = 8;
-            this.label5.Text = "Saturation";
-            // 
-            // trackBar3
-            // 
-            this.trackBar3.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar3.Location = new System.Drawing.Point(85, 43);
-            this.trackBar3.Name = "trackBar3";
-            this.trackBar3.Size = new System.Drawing.Size(163, 45);
-            this.trackBar3.TabIndex = 5;
-            this.trackBar3.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 43);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(46, 13);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Contrast";
-            // 
-            // trackBar2
-            // 
-            this.trackBar2.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.trackBar2.Location = new System.Drawing.Point(85, 19);
-            this.trackBar2.Name = "trackBar2";
-            this.trackBar2.Size = new System.Drawing.Size(163, 45);
-            this.trackBar2.TabIndex = 3;
-            this.trackBar2.TickStyle = System.Windows.Forms.TickStyle.None;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 19);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Brightness";
-            // 
-            // Overlay
-            // 
-            this.Overlay.Controls.Add(this.button2);
-            this.Overlay.Controls.Add(this.btnSaveOverCam1);
-            this.Overlay.Controls.Add(this.groupBox5);
-            this.Overlay.Location = new System.Drawing.Point(4, 22);
-            this.Overlay.Name = "Overlay";
-            this.Overlay.Padding = new System.Windows.Forms.Padding(3);
-            this.Overlay.Size = new System.Drawing.Size(294, 400);
-            this.Overlay.TabIndex = 2;
-            this.Overlay.Text = "Overlay";
-            this.Overlay.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(126, 368);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 26);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Restablecer";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // btnSaveOverCam1
-            // 
-            this.btnSaveOverCam1.Location = new System.Drawing.Point(210, 368);
-            this.btnSaveOverCam1.Name = "btnSaveOverCam1";
-            this.btnSaveOverCam1.Size = new System.Drawing.Size(78, 26);
-            this.btnSaveOverCam1.TabIndex = 4;
-            this.btnSaveOverCam1.Text = "Save";
-            this.btnSaveOverCam1.UseVisualStyleBackColor = true;
-            this.btnSaveOverCam1.Click += new System.EventHandler(this.btnSaveOverCam1_Click);
-            // 
-            // groupBox5
-            // 
-            this.groupBox5.Controls.Add(this.label17);
-            this.groupBox5.Controls.Add(this.checkBox2);
-            this.groupBox5.Controls.Add(this.checkBox1);
-            this.groupBox5.Controls.Add(this.textBox10);
-            this.groupBox5.Controls.Add(this.label16);
-            this.groupBox5.Controls.Add(this.textBox8);
-            this.groupBox5.Controls.Add(this.label14);
-            this.groupBox5.Controls.Add(this.textBox9);
-            this.groupBox5.Controls.Add(this.label15);
-            this.groupBox5.Controls.Add(this.label13);
-            this.groupBox5.Controls.Add(this.textBox7);
-            this.groupBox5.Location = new System.Drawing.Point(6, 6);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(282, 165);
-            this.groupBox5.TabIndex = 0;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Overlay Settings";
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(17, 123);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(77, 13);
-            this.label17.TabIndex = 25;
-            this.label17.Text = "Date and Time";
-            // 
-            // checkBox2
-            // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(146, 123);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(49, 17);
-            this.checkBox2.TabIndex = 24;
-            this.checkBox2.Text = "Time";
-            this.checkBox2.UseVisualStyleBackColor = true;
-            // 
-            // checkBox1
-            // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(100, 123);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(49, 17);
-            this.checkBox1.TabIndex = 23;
-            this.checkBox1.Text = "Date";
-            this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // textBox10
-            // 
-            this.textBox10.Location = new System.Drawing.Point(100, 97);
-            this.textBox10.Name = "textBox10";
-            this.textBox10.Size = new System.Drawing.Size(142, 20);
-            this.textBox10.TabIndex = 22;
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(39, 100);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(55, 13);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Color Text";
-            // 
-            // textBox8
-            // 
-            this.textBox8.Location = new System.Drawing.Point(100, 71);
-            this.textBox8.Name = "textBox8";
-            this.textBox8.Size = new System.Drawing.Size(142, 20);
-            this.textBox8.TabIndex = 20;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(36, 74);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(58, 13);
-            this.label14.TabIndex = 19;
-            this.label14.Text = "Place Text";
-            // 
-            // textBox9
-            // 
-            this.textBox9.Location = new System.Drawing.Point(100, 45);
-            this.textBox9.Name = "textBox9";
-            this.textBox9.Size = new System.Drawing.Size(142, 20);
-            this.textBox9.TabIndex = 18;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(8, 48);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(92, 13);
-            this.label15.TabIndex = 17;
-            this.label15.Text = "Background Color";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(66, 22);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 13);
-            this.label13.TabIndex = 1;
-            this.label13.Text = "Text";
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(100, 19);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(142, 20);
-            this.textBox7.TabIndex = 0;
-            // 
-            // lblCompression
-            // 
-            this.lblCompression.AutoSize = true;
-            this.lblCompression.Location = new System.Drawing.Point(247, 38);
-            this.lblCompression.Name = "lblCompression";
-            this.lblCompression.Size = new System.Drawing.Size(13, 13);
-            this.lblCompression.TabIndex = 4;
-            this.lblCompression.Text = "0";
+            // tabControlSetCam1
+            // 
+            this.tabControlSetCam1.Controls.Add(this.Stream);
+            this.tabControlSetCam1.Controls.Add(this.Image);
+            this.tabControlSetCam1.Controls.Add(this.Overlay);
+            this.tabControlSetCam1.Location = new System.Drawing.Point(12, 12);
+            this.tabControlSetCam1.Name = "tabControlSetCam1";
+            this.tabControlSetCam1.SelectedIndex = 0;
+            this.tabControlSetCam1.Size = new System.Drawing.Size(302, 426);
+            this.tabControlSetCam1.TabIndex = 1;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(501, 397);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 37);
+            this.button1.TabIndex = 7;
+            this.button1.Text = " Ver Pantalla Completa";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fSetCam1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(326, 450);
+            this.ClientSize = new System.Drawing.Size(805, 450);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.tabControlSetCam1);
+            this.Controls.Add(this.btnSaveSetting);
             this.Name = "fSetCam1";
             this.Text = "Settings Camera 1";
-            this.tabControlSetCam1.ResumeLayout(false);
-            this.Stream.ResumeLayout(false);
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trkbcam1Compression)).EndInit();
+            this.Load += new System.EventHandler(this.fSetCam1_Load);
+            this.groupBox6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).EndInit();
+            this.Overlay.ResumeLayout(false);
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
             this.Image.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbExposureValue)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar2)).EndInit();
-            this.Overlay.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox5.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbSharpness)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbSaturation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbContrast)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tkbBrightness)).EndInit();
+            this.Stream.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trkbcam1Compression)).EndInit();
+            this.tabControlSetCam1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-        private System.Windows.Forms.TabControl tabControlSetCam1;
-        private System.Windows.Forms.TabPage Stream;
-        private System.Windows.Forms.TabPage Image;
+        private System.Windows.Forms.Button btnSaveSetting;
+        private System.Windows.Forms.GroupBox groupBox6;
+        public AxAXISMEDIACONTROLLib.AxAxisMediaControl AMCfcam1;
         private System.Windows.Forms.TabPage Overlay;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.CheckBox chkTime;
+        private System.Windows.Forms.CheckBox chkDate;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox txtOverlay;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TabPage Image;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.ComboBox cbxMaxGain;
+        private System.Windows.Forms.ComboBox cbxMaxShutter;
+        private System.Windows.Forms.ComboBox cbxExposureZone;
+        private System.Windows.Forms.ComboBox cbxExposureControl;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.TrackBar tkbExposureValue;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.ComboBox cbxWhiteBalance;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.TrackBar tkbSharpness;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.TrackBar tkbSaturation;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TrackBar tkbContrast;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TrackBar tkbBrightness;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TabPage Stream;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button btnSaveStrCam1;
+        public System.Windows.Forms.ComboBox cbxResolution;
+        public System.Windows.Forms.Label lblCompression;
         private System.Windows.Forms.TrackBar trkbcam1Compression;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TrackBar trackBar5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TrackBar trackBar4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TrackBar trackBar3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TrackBar trackBar2;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnSaveImaCam1;
-        private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TrackBar trackBar6;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnSaveOverCam1;
-        private System.Windows.Forms.GroupBox groupBox5;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.TextBox textBox10;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.TextBox textBox8;
-        private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.TextBox textBox9;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox textBox7;
-        public System.Windows.Forms.TextBox txtcam1resolution;
-        public System.Windows.Forms.Label lblCompression;
+        private System.Windows.Forms.TabControl tabControlSetCam1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label lblExposureValue;
+        private System.Windows.Forms.Label lblSharpness;
+        private System.Windows.Forms.Label lblSaturation;
+        private System.Windows.Forms.Label lblContrast;
+        private System.Windows.Forms.Label lblBright;
     }
 }

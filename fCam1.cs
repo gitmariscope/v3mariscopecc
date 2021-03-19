@@ -21,12 +21,7 @@ namespace testform
         
         private void btnTest_Click(object sender, EventArgs e)
         {
-            AMCfcam1.Stop();
-            string url = "/axis-cgi/mjpg/video.cgi";
-            string urlDef = c.ip_server + url;
-            AMCfcam1.MediaURL = urlDef;
-            AMCfcam1.MediaType = "MJPEG";
-            AMCfcam1.Play();
+           
         }
     }
 }

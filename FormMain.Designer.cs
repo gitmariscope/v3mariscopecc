@@ -59,7 +59,7 @@ namespace testform
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(846, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(882, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -89,21 +89,21 @@ namespace testform
             // camara1ToolStripMenuItem1
             // 
             this.camara1ToolStripMenuItem1.Name = "camara1ToolStripMenuItem1";
-            this.camara1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.camara1ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
             this.camara1ToolStripMenuItem1.Text = "Cámara 1";
             this.camara1ToolStripMenuItem1.Click += new System.EventHandler(this.camara1ToolStripMenuItem1_Click);
             // 
             // cámara2ToolStripMenuItem
             // 
             this.cámara2ToolStripMenuItem.Name = "cámara2ToolStripMenuItem";
-            this.cámara2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cámara2ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cámara2ToolStripMenuItem.Text = "Cámara 2";
             this.cámara2ToolStripMenuItem.Click += new System.EventHandler(this.cámara2ToolStripMenuItem_Click);
             // 
             // cámara3ToolStripMenuItem
             // 
             this.cámara3ToolStripMenuItem.Name = "cámara3ToolStripMenuItem";
-            this.cámara3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cámara3ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.cámara3ToolStripMenuItem.Text = "Cámara 3";
             this.cámara3ToolStripMenuItem.Click += new System.EventHandler(this.cámara3ToolStripMenuItem_Click);
             // 
@@ -124,34 +124,34 @@ namespace testform
             this.camara2ToolStripMenuItem,
             this.camara3ToolStripMenuItem});
             this.setupIPCamToolStripMenuItem.Name = "setupIPCamToolStripMenuItem";
-            this.setupIPCamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setupIPCamToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.setupIPCamToolStripMenuItem.Text = "Setup IP Cam";
             // 
             // camara1ToolStripMenuItem
             // 
             this.camara1ToolStripMenuItem.Name = "camara1ToolStripMenuItem";
-            this.camara1ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.camara1ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.camara1ToolStripMenuItem.Text = "Camera 1 ";
             this.camara1ToolStripMenuItem.Click += new System.EventHandler(this.camara1ToolStripMenuItem_Click);
             // 
             // camara2ToolStripMenuItem
             // 
             this.camara2ToolStripMenuItem.Name = "camara2ToolStripMenuItem";
-            this.camara2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.camara2ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.camara2ToolStripMenuItem.Text = "Camera 2";
             this.camara2ToolStripMenuItem.Click += new System.EventHandler(this.camara2ToolStripMenuItem_Click);
             // 
             // camara3ToolStripMenuItem
             // 
             this.camara3ToolStripMenuItem.Name = "camara3ToolStripMenuItem";
-            this.camara3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.camara3ToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
             this.camara3ToolStripMenuItem.Text = "Camera 3";
             this.camara3ToolStripMenuItem.Click += new System.EventHandler(this.camara3ToolStripMenuItem_Click);
             // 
             // setupROVControlToolStripMenuItem
             // 
             this.setupROVControlToolStripMenuItem.Name = "setupROVControlToolStripMenuItem";
-            this.setupROVControlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.setupROVControlToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
             this.setupROVControlToolStripMenuItem.Text = "Setup ROV control";
             this.setupROVControlToolStripMenuItem.Click += new System.EventHandler(this.setupROVControlToolStripMenuItem_Click);
             // 
@@ -174,7 +174,7 @@ namespace testform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(846, 464);
+            this.ClientSize = new System.Drawing.Size(882, 492);
             this.Controls.Add(this.menuStrip1);
             this.HelpButton = true;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
