@@ -35,9 +35,9 @@ namespace testform
             this.AMCfcam1 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
             this.Overlay = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbxColorText = new System.Windows.Forms.ComboBox();
+            this.cbxPlaceText = new System.Windows.Forms.ComboBox();
+            this.cbxBkgColor = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.chkTime = new System.Windows.Forms.CheckBox();
             this.chkDate = new System.Windows.Forms.CheckBox();
@@ -85,6 +85,7 @@ namespace testform
             this.label2 = new System.Windows.Forms.Label();
             this.tabControlSetCam1 = new System.Windows.Forms.TabControl();
             this.button1 = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).BeginInit();
             this.Overlay.SuspendLayout();
@@ -146,9 +147,10 @@ namespace testform
             // 
             // groupBox5
             // 
-            this.groupBox5.Controls.Add(this.comboBox3);
-            this.groupBox5.Controls.Add(this.comboBox2);
-            this.groupBox5.Controls.Add(this.comboBox1);
+            this.groupBox5.Controls.Add(this.button3);
+            this.groupBox5.Controls.Add(this.cbxColorText);
+            this.groupBox5.Controls.Add(this.cbxPlaceText);
+            this.groupBox5.Controls.Add(this.cbxBkgColor);
             this.groupBox5.Controls.Add(this.label17);
             this.groupBox5.Controls.Add(this.chkTime);
             this.groupBox5.Controls.Add(this.chkDate);
@@ -164,43 +166,43 @@ namespace testform
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Overlay Settings";
             // 
-            // comboBox3
+            // cbxColorText
             // 
-            this.comboBox3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Items.AddRange(new object[] {
+            this.cbxColorText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxColorText.FormattingEnabled = true;
+            this.cbxColorText.Items.AddRange(new object[] {
             "white",
             "black"});
-            this.comboBox3.Location = new System.Drawing.Point(100, 98);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(113, 21);
-            this.comboBox3.TabIndex = 27;
+            this.cbxColorText.Location = new System.Drawing.Point(100, 98);
+            this.cbxColorText.Name = "cbxColorText";
+            this.cbxColorText.Size = new System.Drawing.Size(113, 21);
+            this.cbxColorText.TabIndex = 27;
             // 
-            // comboBox2
+            // cbxPlaceText
             // 
-            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbxPlaceText.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxPlaceText.FormattingEnabled = true;
+            this.cbxPlaceText.Items.AddRange(new object[] {
             "Top",
             "Bottom"});
-            this.comboBox2.Location = new System.Drawing.Point(100, 71);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(113, 21);
-            this.comboBox2.TabIndex = 26;
+            this.cbxPlaceText.Location = new System.Drawing.Point(100, 71);
+            this.cbxPlaceText.Name = "cbxPlaceText";
+            this.cbxPlaceText.Size = new System.Drawing.Size(113, 21);
+            this.cbxPlaceText.TabIndex = 26;
             // 
-            // comboBox1
+            // cbxBkgColor
             // 
-            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbxBkgColor.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbxBkgColor.FormattingEnabled = true;
+            this.cbxBkgColor.Items.AddRange(new object[] {
             "white",
             "black",
             "transparent",
             "semitransparent"});
-            this.comboBox1.Location = new System.Drawing.Point(100, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(113, 21);
-            this.comboBox1.TabIndex = 1;
+            this.cbxBkgColor.Location = new System.Drawing.Point(100, 45);
+            this.cbxBkgColor.Name = "cbxBkgColor";
+            this.cbxBkgColor.Size = new System.Drawing.Size(113, 21);
+            this.cbxBkgColor.TabIndex = 1;
             // 
             // label17
             // 
@@ -284,6 +286,7 @@ namespace testform
             this.button2.TabIndex = 5;
             this.button2.Text = "Restablecer";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // Image
             // 
@@ -678,6 +681,16 @@ namespace testform
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Limpiar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // fSetCam1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -724,54 +737,55 @@ namespace testform
         private System.Windows.Forms.TabPage Overlay;
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.CheckBox chkTime;
-        private System.Windows.Forms.CheckBox chkDate;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtOverlay;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TabPage Image;
         private System.Windows.Forms.GroupBox groupBox4;
-        private System.Windows.Forms.ComboBox cbxMaxGain;
-        private System.Windows.Forms.ComboBox cbxMaxShutter;
-        private System.Windows.Forms.ComboBox cbxExposureZone;
-        private System.Windows.Forms.ComboBox cbxExposureControl;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.TrackBar tkbExposureValue;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.ComboBox cbxWhiteBalance;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TrackBar tkbSharpness;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TrackBar tkbSaturation;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TrackBar tkbContrast;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TrackBar tkbBrightness;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TabPage Stream;
         private System.Windows.Forms.GroupBox groupBox1;
         public System.Windows.Forms.ComboBox cbxResolution;
         public System.Windows.Forms.Label lblCompression;
-        private System.Windows.Forms.TrackBar trkbcam1Compression;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabControl tabControlSetCam1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Label lblExposureValue;
-        private System.Windows.Forms.Label lblSharpness;
-        private System.Windows.Forms.Label lblSaturation;
-        private System.Windows.Forms.Label lblContrast;
-        private System.Windows.Forms.Label lblBright;
+        public System.Windows.Forms.TrackBar trkbcam1Compression;
+        public System.Windows.Forms.CheckBox chkTime;
+        public System.Windows.Forms.CheckBox chkDate;
+        public System.Windows.Forms.TextBox txtOverlay;
+        public System.Windows.Forms.ComboBox cbxMaxGain;
+        public System.Windows.Forms.ComboBox cbxMaxShutter;
+        public System.Windows.Forms.ComboBox cbxExposureZone;
+        public System.Windows.Forms.ComboBox cbxExposureControl;
+        public System.Windows.Forms.TrackBar tkbExposureValue;
+        public System.Windows.Forms.ComboBox cbxWhiteBalance;
+        public System.Windows.Forms.TrackBar tkbSharpness;
+        public System.Windows.Forms.TrackBar tkbSaturation;
+        public System.Windows.Forms.TrackBar tkbContrast;
+        public System.Windows.Forms.TrackBar tkbBrightness;
+        public System.Windows.Forms.ComboBox cbxColorText;
+        public System.Windows.Forms.ComboBox cbxPlaceText;
+        public System.Windows.Forms.ComboBox cbxBkgColor;
+        public System.Windows.Forms.Label lblExposureValue;
+        public System.Windows.Forms.Label lblSharpness;
+        public System.Windows.Forms.Label lblSaturation;
+        public System.Windows.Forms.Label lblContrast;
+        public System.Windows.Forms.Label lblBright;
+        public System.Windows.Forms.Button button3;
     }
 }

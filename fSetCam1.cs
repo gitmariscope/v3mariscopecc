@@ -31,30 +31,32 @@ namespace testform
         #region cargar_componentes
         public void cargar_componentes()
         {
-           
-         //------Llenado  combobox resolution ------------
+
+            //===========LLENADO cbxREsolution==============
             cbxResolution.DisplayMember = "Text";
             cbxResolution.ValueMember = "Value";
+
             var itemsRes = new[] {
-                 new { Text = "1400x1050 (16:9)", Value = "1400x1050"},
-                 new { Text = "1280x720 (16:9)" , Value = "1280x960" },
-                 new { Text = "1024x768 (4:3)"  , Value = "1024x768" },
-                 new { Text = "800x600 (4:3)"   , Value = "800x600"  },
-                 new { Text = "640x480 (4:3)"   , Value = "640x480"  },
-                 new { Text = "480x360 (4:3)"   , Value = "480x360"  },
-                 new { Text = "320x240 (4:3)"   , Value = "320x240"  },
-                 new { Text = "240x180(4:3)"    , Value = "240x180"  },
-                 new { Text = "160x120 (4:3)"   , Value = "160x120"  },
-                 new { Text = "1920x1080 (16:9)", Value = "1920x1080"},
-                 new { Text = "1280x720 (16:9)" , Value = "1280x720" },
-                 new { Text = "854x480 (16:9)"  , Value = "854x480"  },
-                 new { Text = "800x450 (16:9)"  , Value = "800x450"  },
-                 new { Text = "640x360 (16:9)"  , Value = "640x360"  },
-                 new { Text = "320x180 (16:9)"  , Value = "320x180"  },
-                 new { Text = "160x90 (16:9)"   , Value = "160x90"   },
+             new { Text = "1400x1050 (16:9)" , Value = "1400x1050" },
+             new { Text = "1280x720 (16:9)"  , Value = "1280x960"  },
+             new { Text = "1024x768 (4:3)"   , Value = "1024x768"  },
+             new { Text = "800x600 (4:3)"    , Value = "800x600"   },
+             new { Text = "640x480 (4:3)"    , Value = "640x480"   },
+             new { Text = "480x360 (4:3)"    , Value = "480x360"   },
+             new { Text = "320x240 (4:3)"    , Value = "320x240"   },
+             new { Text = "240x180(4:3)"     , Value = "240x180"   },
+             new { Text = "160x120 (4:3)"    , Value = "160x120"   },
+             new { Text = "1920x1080 (16:9)" , Value = "1920x1080" },
+             new { Text = "1280x720 (16:9)"  , Value = "1280x720"  },
+             new { Text = "854x480 (16:9)"   , Value = "854x480"   },
+             new { Text = "800x450 (16:9)"   , Value = "800x450"   },
+             new { Text = "640x360 (16:9)"   , Value = "640x360"   },
+             new { Text = "320x180 (16:9)"   , Value = "320x180"   },
+             new { Text = "160x90 (16:9)"    , Value = "160x90"    },
             };
-           cbxResolution.DataSource = itemsRes;
-            //------Llenado  combobox resolution ------------
+
+            cbxResolution.DataSource = itemsRes;
+            //===========LLENADO cbxREsolution==============
 
             //------Llenado White Balance ------------
             cbxWhiteBalance.DisplayMember = "Text";
@@ -104,23 +106,25 @@ namespace testform
             //------Llenado GAIN MAX ------------
             cbxMaxGain.DisplayMember = "Text";
             cbxMaxGain.ValueMember = "Value";
-            var itemMG = new[] {
-             new { Text = "0"   , Value = "0"},
-             new { Text = "3"   , Value = "8"},
-             new { Text = "6"   , Value = "17"},
-             new { Text = "9"   , Value = "25"},
-             new { Text = "12"  , Value = "33"},
-             new { Text = "15"  , Value = "42"},
-             new { Text = "18"  , Value = "50"},
-             new { Text = "21"  , Value = "58"},
-             new { Text = "24"  , Value = "67"},
-             new { Text = "27"  , Value = "75"},
-             new { Text = "30"  , Value = "83"},
-             new { Text = "33"  , Value = "92"},
-             new { Text = "36"  , Value = "100"},
+            var itemMG = new[] 
+            {
+                   new { Text = "0"   , Value = "0"},
+                   new { Text = "3"   , Value = "8"},
+                   new { Text = "6"   , Value = "17"},
+                   new { Text = "9"   , Value = "25"},
+                   new { Text = "12"  , Value = "33"},
+                   new { Text = "15"  , Value = "42"},
+                   new { Text = "18"  , Value = "50"},
+                   new { Text = "21"  , Value = "58"},
+                   new { Text = "24"  , Value = "67"},
+                   new { Text = "27"  , Value = "75"},
+                   new { Text = "30"  , Value = "83"},
+                   new { Text = "33"  , Value = "92"},
+                   new { Text = "36"  , Value = "100"},
 
             };
             cbxMaxGain.DataSource = itemMG;
+            
             //------Llenado GAIN MAX ------------
 
             //------Llenado SHUTTER MAX ------------
@@ -152,6 +156,7 @@ namespace testform
             AMCfcam1.MediaType = "MJPEG";
             AMCfcam1.Play();
             cargar_componentes();
+            reset_default_settings();
         }
 
         private void btnSaveSetting_Click(object sender, EventArgs e)
@@ -246,6 +251,21 @@ namespace testform
             response9.Close();
             //FIN gain max
 
+
+            //============OVERLAY TEXT ===================
+            
+            AMCfcam1.EnableOverlays = false;
+            //string urlOver = $"{ip_server}/axis-cgi/param.cgi?action=update&Image.I0.Text.TextEnabled=yes&Image.I0.Text.String={txtOverlay.Text}&Image.I0.Text.Position={cbxPlaceText.Text}&Image.I0.Text.Color={cbxColorText.Text}&Image.I0.Text.BGColor={cbxBKcolor.Text}&camera=1";
+            string urlOver = $"{cam1.ip_server}/axis-cgi/param.cgi?action=update&Image.I0.Text.TextEnabled=yes&Image.I0.Text.String={txtOverlay.Text}"+
+                             $"&Image.I0.Text.Position={cbxPlaceText.Text}&Image.I0.Text.Color={cbxColorText.Text}&Image.I0.Text.BGColor={cbxBkgColor.Text}";
+            NetworkCredential networkCredentialOverlay = new NetworkCredential(cam1.user, cam1.password);
+            WebRequest requestOverlay = WebRequest.Create(urlOver);
+            requestOverlay.Credentials = networkCredentialOverlay;
+            HttpWebResponse responseOverlay = (HttpWebResponse)requestOverlay.GetResponse();
+            responseOverlay.Close();
+            
+            //============OVERLAY TEXT ===================
+
             AMCfcam1.Play();
         }
 
@@ -256,13 +276,13 @@ namespace testform
 
         private void chkDate_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkDate.Checked == true) { txtOverlay.Text += "%D"; }
+            if (chkDate.Checked == true) { txtOverlay.Text += " %D"; }
             else { txtOverlay.Text = txtOverlay.Text.Replace("%D", string.Empty); }
         }
 
         private void chkTime_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkTime.Checked == true) { txtOverlay.Text += "%T"; }
+            if (chkTime.Checked == true) { txtOverlay.Text += " %T"; }
             else { txtOverlay.Text = txtOverlay.Text.Replace("%T", string.Empty); }
         }
 
@@ -289,6 +309,46 @@ namespace testform
         private void tkbExposureValue_Scroll(object sender, EventArgs e)
         {
             lblExposureValue.Text = tkbExposureValue.Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+            reset_default_settings();
+        }
+        public void reset_default_settings()
+        {
+            tkbBrightness.Value = 50;
+            lblBright.Text = tkbBrightness.Value.ToString();
+            tkbContrast.Value = 50;
+            lblContrast.Text = tkbBrightness.Value.ToString();
+            tkbSaturation.Value = 50;
+            lblSaturation.Text = tkbSaturation.Value.ToString();
+            tkbSharpness.Value = 50;
+            lblSharpness.Text = tkbSharpness.Value.ToString();
+            tkbExposureValue.Value = 50;
+            lblExposureValue.Text = tkbExposureValue.Value.ToString();
+            trkbcam1Compression.Value = 30;
+            lblCompression.Text = trkbcam1Compression.Value.ToString();
+
+            txtOverlay.Text = "Mariscope Ingeniería";
+            cbxBkgColor.SelectedIndex = 1;
+            cbxPlaceText.SelectedIndex = 0;
+            cbxColorText.SelectedIndex = 0;
+            chkDate.Checked = false;
+            chkTime.Checked = false;
+//            cbxResolution.SelectedIndex = 9;
+            cbxWhiteBalance.SelectedIndex = 0;
+            cbxExposureZone.SelectedIndex = 0;
+            cbxExposureControl.SelectedIndex = 0;
+            cbxMaxShutter.SelectedIndex = 0;
+            cbxMaxGain.SelectedIndex = 12;
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            txtOverlay.Clear();
+            txtOverlay.Focus();
         }
     }
 }

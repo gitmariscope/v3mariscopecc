@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace testform.models
 {
     public class camera
@@ -36,7 +37,8 @@ namespace testform.models
         public string colorText { get; set; }
         public string Date { get; set; } //comando camara '%D'
         public string Time { get; set; } //comando camara '%T'
-        #endregion overlay
+        #endregion overlay   
+        
     }
 
 
