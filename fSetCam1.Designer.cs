@@ -35,6 +35,7 @@ namespace testform
             this.AMCfcam1 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
             this.Overlay = new System.Windows.Forms.TabPage();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.button3 = new System.Windows.Forms.Button();
             this.cbxColorText = new System.Windows.Forms.ComboBox();
             this.cbxPlaceText = new System.Windows.Forms.ComboBox();
             this.cbxBkgColor = new System.Windows.Forms.ComboBox();
@@ -84,8 +85,13 @@ namespace testform
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.tabControlSetCam1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnConectar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.ipAddressControl1 = new IPAddressControlLib.IPAddressControl();
+            this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).BeginInit();
             this.Overlay.SuspendLayout();
@@ -103,13 +109,15 @@ namespace testform
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkbcam1Compression)).BeginInit();
             this.tabControlSetCam1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnSaveSetting
             // 
-            this.btnSaveSetting.Location = new System.Drawing.Point(333, 397);
+            this.btnSaveSetting.Location = new System.Drawing.Point(16, 401);
             this.btnSaveSetting.Name = "btnSaveSetting";
-            this.btnSaveSetting.Size = new System.Drawing.Size(78, 37);
+            this.btnSaveSetting.Size = new System.Drawing.Size(95, 37);
             this.btnSaveSetting.TabIndex = 3;
             this.btnSaveSetting.Text = "Guardar Cambios";
             this.btnSaveSetting.UseVisualStyleBackColor = true;
@@ -120,7 +128,7 @@ namespace testform
             this.groupBox6.Controls.Add(this.AMCfcam1);
             this.groupBox6.Location = new System.Drawing.Point(327, 12);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(474, 379);
+            this.groupBox6.Size = new System.Drawing.Size(474, 426);
             this.groupBox6.TabIndex = 6;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Cámara 1";
@@ -131,7 +139,7 @@ namespace testform
             this.AMCfcam1.Location = new System.Drawing.Point(6, 22);
             this.AMCfcam1.Name = "AMCfcam1";
             this.AMCfcam1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("AMCfcam1.OcxState")));
-            this.AMCfcam1.Size = new System.Drawing.Size(462, 351);
+            this.AMCfcam1.Size = new System.Drawing.Size(462, 398);
             this.AMCfcam1.TabIndex = 0;
             // 
             // Overlay
@@ -140,7 +148,7 @@ namespace testform
             this.Overlay.Location = new System.Drawing.Point(4, 22);
             this.Overlay.Name = "Overlay";
             this.Overlay.Padding = new System.Windows.Forms.Padding(3);
-            this.Overlay.Size = new System.Drawing.Size(294, 400);
+            this.Overlay.Size = new System.Drawing.Size(294, 353);
             this.Overlay.TabIndex = 2;
             this.Overlay.Text = "Overlay";
             this.Overlay.UseVisualStyleBackColor = true;
@@ -165,6 +173,16 @@ namespace testform
             this.groupBox5.TabIndex = 0;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Overlay Settings";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(6, 17);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(54, 23);
+            this.button3.TabIndex = 1;
+            this.button3.Text = "Limpiar";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // cbxColorText
             // 
@@ -280,11 +298,11 @@ namespace testform
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(417, 397);
+            this.button2.Location = new System.Drawing.Point(117, 401);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 37);
+            this.button2.Size = new System.Drawing.Size(95, 37);
             this.button2.TabIndex = 5;
-            this.button2.Text = "Restablecer";
+            this.button2.Text = "Valores Default";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -296,7 +314,7 @@ namespace testform
             this.Image.Location = new System.Drawing.Point(4, 22);
             this.Image.Name = "Image";
             this.Image.Padding = new System.Windows.Forms.Padding(3);
-            this.Image.Size = new System.Drawing.Size(294, 400);
+            this.Image.Size = new System.Drawing.Size(294, 353);
             this.Image.TabIndex = 1;
             this.Image.Text = "Image";
             this.Image.UseVisualStyleBackColor = true;
@@ -594,7 +612,7 @@ namespace testform
             this.Stream.Location = new System.Drawing.Point(4, 22);
             this.Stream.Name = "Stream";
             this.Stream.Padding = new System.Windows.Forms.Padding(3);
-            this.Stream.Size = new System.Drawing.Size(294, 400);
+            this.Stream.Size = new System.Drawing.Size(294, 353);
             this.Stream.TabIndex = 0;
             this.Stream.Text = "Stream";
             this.Stream.UseVisualStyleBackColor = true;
@@ -608,7 +626,7 @@ namespace testform
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(282, 388);
+            this.groupBox1.Size = new System.Drawing.Size(282, 341);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Settings Stream Camera 1";
@@ -662,34 +680,93 @@ namespace testform
             // 
             // tabControlSetCam1
             // 
+            this.tabControlSetCam1.Controls.Add(this.tabPage1);
             this.tabControlSetCam1.Controls.Add(this.Stream);
             this.tabControlSetCam1.Controls.Add(this.Image);
             this.tabControlSetCam1.Controls.Add(this.Overlay);
             this.tabControlSetCam1.Location = new System.Drawing.Point(12, 12);
             this.tabControlSetCam1.Name = "tabControlSetCam1";
             this.tabControlSetCam1.SelectedIndex = 0;
-            this.tabControlSetCam1.Size = new System.Drawing.Size(302, 426);
+            this.tabControlSetCam1.Size = new System.Drawing.Size(302, 379);
             this.tabControlSetCam1.TabIndex = 1;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(294, 353);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Setting IP";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnConectar);
+            this.groupBox7.Controls.Add(this.btnGuardar);
+            this.groupBox7.Controls.Add(this.ipAddressControl1);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Location = new System.Drawing.Point(3, 3);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(288, 113);
+            this.groupBox7.TabIndex = 0;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Ip Camera";
+            // 
+            // btnConectar
+            // 
+            this.btnConectar.Location = new System.Drawing.Point(206, 56);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(75, 23);
+            this.btnConectar.TabIndex = 3;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(125, 56);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar IP";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // ipAddressControl1
+            // 
+            this.ipAddressControl1.AllowInternalTab = false;
+            this.ipAddressControl1.AutoHeight = true;
+            this.ipAddressControl1.BackColor = System.Drawing.SystemColors.Window;
+            this.ipAddressControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ipAddressControl1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ipAddressControl1.Location = new System.Drawing.Point(125, 29);
+            this.ipAddressControl1.MinimumSize = new System.Drawing.Size(87, 20);
+            this.ipAddressControl1.Name = "ipAddressControl1";
+            this.ipAddressControl1.ReadOnly = false;
+            this.ipAddressControl1.Size = new System.Drawing.Size(156, 20);
+            this.ipAddressControl1.TabIndex = 1;
+            this.ipAddressControl1.Text = "...";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(113, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Direccion IP Camara 1";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(501, 397);
+            this.button1.Location = new System.Drawing.Point(218, 401);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 37);
+            this.button1.Size = new System.Drawing.Size(95, 37);
             this.button1.TabIndex = 7;
-            this.button1.Text = " Ver Pantalla Completa";
+            this.button1.Text = "Pantalla Completa";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(6, 17);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(54, 23);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Limpiar";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // fSetCam1
             // 
@@ -726,6 +803,9 @@ namespace testform
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.trkbcam1Compression)).EndInit();
             this.tabControlSetCam1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -787,5 +867,11 @@ namespace testform
         public System.Windows.Forms.Label lblContrast;
         public System.Windows.Forms.Label lblBright;
         public System.Windows.Forms.Button button3;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Label label18;
+        private IPAddressControlLib.IPAddressControl ipAddressControl1;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Button btnConectar;
     }
 }

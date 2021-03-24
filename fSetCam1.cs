@@ -9,19 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using testform.models;
 using System.Net;
+using System.IO;
+using Newtonsoft.Json;
+
+
 
 namespace testform
 {
     public partial class fSetCam1 : Form
     {
         camera cam1 = new camera();
-
+        string serverpathCamera = Path.Combine("..\\..\\..\\testform\\", "json", "camara1.json");
         public fSetCam1()
         {
             InitializeComponent();
-            cam1.ip_server = "http://192.168.2.251";
-            cam1.user = "root";
-            cam1.password = "admin";
+            cargar_ultima_IP();
+            cam1.ip_server = $"http://{ipAddressControl1.Text}";
+            cam1.user      = "root";
+            cam1.password  = "admin";
         }
 
         private void trkbcam1Compression_Scroll(object sender, EventArgs e)
@@ -149,12 +154,6 @@ namespace testform
         #endregion cargar_componentes
         private void fSetCam1_Load(object sender, EventArgs e)
         {
-            //Inicio de camara al iniciar modulo setting camara   ||
-            string url = "/axis-cgi/mjpg/video.cgi";
-            string urlDef = cam1.ip_server + url;
-            AMCfcam1.MediaURL = urlDef;
-            AMCfcam1.MediaType = "MJPEG";
-            AMCfcam1.Play();
             cargar_componentes();
             reset_default_settings();
         }
@@ -312,8 +311,7 @@ namespace testform
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-
+        { 
             reset_default_settings();
         }
         public void reset_default_settings()
@@ -337,7 +335,7 @@ namespace testform
             cbxColorText.SelectedIndex = 0;
             chkDate.Checked = false;
             chkTime.Checked = false;
-//            cbxResolution.SelectedIndex = 9;
+            //cbxResolution.SelectedIndex = 9;
             cbxWhiteBalance.SelectedIndex = 0;
             cbxExposureZone.SelectedIndex = 0;
             cbxExposureControl.SelectedIndex = 0;
@@ -349,6 +347,57 @@ namespace testform
         {
             txtOverlay.Clear();
             txtOverlay.Focus();
+        }
+
+        
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+              string nombrecam = "Camara1";
+              var ip_camera = new set_cam()
+              {
+                  ip_camara =  ipAddressControl1.Text, 
+                  nombre_camara = nombrecam 
+              };
+              var sIniFile = File.ReadAllText(serverpathCamera);
+              var cameraDes = JsonConvert.DeserializeObject<List<set_cam>>(sIniFile);
+              if (cameraDes == null)
+              cameraDes = new List<set_cam>();
+              cameraDes.Add(ip_camera);
+              string datosJson = JsonConvert.SerializeObject(cameraDes);
+              File.WriteAllText(serverpathCamera, datosJson);
+              MessageBox.Show($"Direccion '{ ipAddressControl1.Text}' guardada.", "Dirección IP Guardada",MessageBoxButtons.OK);
+              
+            
+        }
+
+        public void cargar_ultima_IP()
+        {
+            //Se cargan ultima registro de IP 
+            var sIniFile = File.ReadAllText(serverpathCamera);
+            var jsonObj = JsonConvert.DeserializeObject<List<set_cam>>(sIniFile);
+            var LastRegister = jsonObj.OrderByDescending(x => x.nombre_camara)
+                                      .LastOrDefault().ip_camara;
+            ipAddressControl1.Text = LastRegister.ToString();
+        }
+
+        private void btnConectar_Click(object sender, EventArgs e)
+        {
+            if (ipAddressControl1.Text == "...")
+            {
+                MessageBox.Show("IP no ingresada");
+            }
+            else
+            { 
+                AMCfcam1.Stop();
+                //Inicio de camara al iniciar modulo setting camara   ||
+                string url = "/axis-cgi/mjpg/video.cgi";
+                string urlDef = $"http://{ipAddressControl1.Text}{url}";
+                AMCfcam1.MediaURL = urlDef;
+                AMCfcam1.MediaType = "MJPEG";
+                AMCfcam1.Play();
+                reset_default_settings();
+            }
+
         }
     }
 }
