@@ -29,6 +29,7 @@ namespace testform
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSetCam1));
             this.btnSaveSetting = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
@@ -47,7 +48,7 @@ namespace testform
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtOverlay = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnRestablecer = new System.Windows.Forms.Button();
             this.Image = new System.Windows.Forms.TabPage();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.lblExposureValue = new System.Windows.Forms.Label();
@@ -92,6 +93,7 @@ namespace testform
             this.ipAddressControl1 = new IPAddressControlLib.IPAddressControl();
             this.label18 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AMCfcam1)).BeginInit();
             this.Overlay.SuspendLayout();
@@ -115,11 +117,14 @@ namespace testform
             // 
             // btnSaveSetting
             // 
-            this.btnSaveSetting.Location = new System.Drawing.Point(16, 401);
+            this.btnSaveSetting.FlatAppearance.BorderSize = 0;
+            this.btnSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveSetting.Image")));
+            this.btnSaveSetting.Location = new System.Drawing.Point(84, 397);
             this.btnSaveSetting.Name = "btnSaveSetting";
-            this.btnSaveSetting.Size = new System.Drawing.Size(95, 37);
+            this.btnSaveSetting.Size = new System.Drawing.Size(54, 43);
             this.btnSaveSetting.TabIndex = 3;
-            this.btnSaveSetting.Text = "Guardar Cambios";
+            this.toolTip1.SetToolTip(this.btnSaveSetting, "Guardar Valores");
             this.btnSaveSetting.UseVisualStyleBackColor = true;
             this.btnSaveSetting.Click += new System.EventHandler(this.btnSaveSetting_Click);
             // 
@@ -296,15 +301,18 @@ namespace testform
             this.txtOverlay.Size = new System.Drawing.Size(176, 20);
             this.txtOverlay.TabIndex = 0;
             // 
-            // button2
+            // btnRestablecer
             // 
-            this.button2.Location = new System.Drawing.Point(117, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 37);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Valores Default";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btnRestablecer.FlatAppearance.BorderSize = 0;
+            this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestablecer.Image = ((System.Drawing.Image)(resources.GetObject("btnRestablecer.Image")));
+            this.btnRestablecer.Location = new System.Drawing.Point(144, 397);
+            this.btnRestablecer.Name = "btnRestablecer";
+            this.btnRestablecer.Size = new System.Drawing.Size(54, 43);
+            this.btnRestablecer.TabIndex = 5;
+            this.toolTip1.SetToolTip(this.btnRestablecer, "Restablecer Valores de Fábrica");
+            this.btnRestablecer.UseVisualStyleBackColor = true;
+            this.btnRestablecer.Click += new System.EventHandler(this.button2_Click);
             // 
             // Image
             // 
@@ -760,11 +768,14 @@ namespace testform
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(218, 401);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(204, 397);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 37);
+            this.button1.Size = new System.Drawing.Size(54, 43);
             this.button1.TabIndex = 7;
-            this.button1.Text = "Pantalla Completa";
+            this.toolTip1.SetToolTip(this.button1, "Pantalla Completa");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -774,7 +785,7 @@ namespace testform
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 450);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnRestablecer);
             this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.tabControlSetCam1);
             this.Controls.Add(this.btnSaveSetting);
@@ -821,7 +832,7 @@ namespace testform
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnRestablecer;
         private System.Windows.Forms.TabPage Image;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label label12;
@@ -873,5 +884,6 @@ namespace testform
         private IPAddressControlLib.IPAddressControl ipAddressControl1;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Button btnConectar;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

@@ -11,7 +11,6 @@ namespace testform.models
     {
         #region stream
         public string ip_server { get; set; }
-        public string nombre_camara { get; set; }
         public string user { get; set; }
         public string password { get; set; }
         public string resolucion { get; set; }

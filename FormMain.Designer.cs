@@ -32,6 +32,7 @@ namespace testform
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.crearCarpetaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ediciónToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camaraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camara1ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -45,6 +46,7 @@ namespace testform
             this.setupROVControlToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeMCCToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,9 +67,19 @@ namespace testform
             // 
             // archivoToolStripMenuItem
             // 
+            this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.crearCarpetaToolStripMenuItem,
+            this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
             this.archivoToolStripMenuItem.Size = new System.Drawing.Size(60, 20);
             this.archivoToolStripMenuItem.Text = "Archivo";
+            // 
+            // crearCarpetaToolStripMenuItem
+            // 
+            this.crearCarpetaToolStripMenuItem.Name = "crearCarpetaToolStripMenuItem";
+            this.crearCarpetaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.crearCarpetaToolStripMenuItem.Text = "Crear carpeta";
+            this.crearCarpetaToolStripMenuItem.Click += new System.EventHandler(this.crearCarpetaToolStripMenuItem_Click);
             // 
             // ediciónToolStripMenuItem
             // 
@@ -89,21 +101,21 @@ namespace testform
             // camara1ToolStripMenuItem1
             // 
             this.camara1ToolStripMenuItem1.Name = "camara1ToolStripMenuItem1";
-            this.camara1ToolStripMenuItem1.Size = new System.Drawing.Size(124, 22);
+            this.camara1ToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.camara1ToolStripMenuItem1.Text = "Cámara 1";
             this.camara1ToolStripMenuItem1.Click += new System.EventHandler(this.camara1ToolStripMenuItem1_Click);
             // 
             // cámara2ToolStripMenuItem
             // 
             this.cámara2ToolStripMenuItem.Name = "cámara2ToolStripMenuItem";
-            this.cámara2ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cámara2ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cámara2ToolStripMenuItem.Text = "Cámara 2";
             this.cámara2ToolStripMenuItem.Click += new System.EventHandler(this.cámara2ToolStripMenuItem_Click);
             // 
             // cámara3ToolStripMenuItem
             // 
             this.cámara3ToolStripMenuItem.Name = "cámara3ToolStripMenuItem";
-            this.cámara3ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.cámara3ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cámara3ToolStripMenuItem.Text = "Cámara 3";
             this.cámara3ToolStripMenuItem.Click += new System.EventHandler(this.cámara3ToolStripMenuItem_Click);
             // 
@@ -115,7 +127,6 @@ namespace testform
             this.comunicacionesToolStripMenuItem.Name = "comunicacionesToolStripMenuItem";
             this.comunicacionesToolStripMenuItem.Size = new System.Drawing.Size(108, 20);
             this.comunicacionesToolStripMenuItem.Text = "Comunicaciones";
-            this.comunicacionesToolStripMenuItem.Click += new System.EventHandler(this.comunicacionesToolStripMenuItem_Click);
             // 
             // setupIPCamToolStripMenuItem
             // 
@@ -124,7 +135,7 @@ namespace testform
             this.camara2ToolStripMenuItem,
             this.camara3ToolStripMenuItem});
             this.setupIPCamToolStripMenuItem.Name = "setupIPCamToolStripMenuItem";
-            this.setupIPCamToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.setupIPCamToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.setupIPCamToolStripMenuItem.Text = "Setup IP Cam";
             // 
             // camara1ToolStripMenuItem
@@ -151,7 +162,7 @@ namespace testform
             // setupROVControlToolStripMenuItem
             // 
             this.setupROVControlToolStripMenuItem.Name = "setupROVControlToolStripMenuItem";
-            this.setupROVControlToolStripMenuItem.Size = new System.Drawing.Size(171, 22);
+            this.setupROVControlToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.setupROVControlToolStripMenuItem.Text = "Setup ROV control";
             this.setupROVControlToolStripMenuItem.Click += new System.EventHandler(this.setupROVControlToolStripMenuItem_Click);
             // 
@@ -166,9 +177,16 @@ namespace testform
             // acercaDeMCCToolStripMenuItem
             // 
             this.acercaDeMCCToolStripMenuItem.Name = "acercaDeMCCToolStripMenuItem";
-            this.acercaDeMCCToolStripMenuItem.Size = new System.Drawing.Size(156, 22);
+            this.acercaDeMCCToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.acercaDeMCCToolStripMenuItem.Text = "Acerca de MCC";
             this.acercaDeMCCToolStripMenuItem.Click += new System.EventHandler(this.acercaDeMCCToolStripMenuItem_Click);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salirToolStripMenuItem.Text = "Salir";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // FormMain
             // 
@@ -209,6 +227,8 @@ namespace testform
         private System.Windows.Forms.ToolStripMenuItem camara1ToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem cámara2ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cámara3ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem crearCarpetaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
     }
 }
 

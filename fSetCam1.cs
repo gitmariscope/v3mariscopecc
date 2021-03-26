@@ -20,6 +20,8 @@ namespace testform
     {
         camera cam1 = new camera();
         string serverpathCamera = Path.Combine("..\\..\\..\\testform\\", "json", "camara1.json");
+
+        
         public fSetCam1()
         {
             InitializeComponent();
@@ -398,6 +400,14 @@ namespace testform
                 reset_default_settings();
             }
 
+        }
+
+        private void toolTip1_Popup(object sender, PopupEventArgs e)
+        {
+            ToolTip tt = new ToolTip();
+
+            tt.Show("Guardar Valores", btnGuardar);
+            tt.SetToolTip(btnRestablecer, "Restablecer Valores de Fábrica");
         }
     }
 }

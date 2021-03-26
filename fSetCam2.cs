@@ -1,7 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System;
+using Newtonsoft.Json;
+using System.Collections;
+using System.Linq;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,6 +21,8 @@ namespace testform
     public partial class fSetCam2 : Form
     {
         camera cam2 = new camera();
+
+        string serverpathCamera = Path.Combine("..\\..\\..\\testform\\", "json", "camara2.json");
 
         public fSetCam2()
         {
@@ -191,17 +196,50 @@ namespace testform
             reset_default_settings();
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+
+        private void trkbcam1Compression_Scroll_1(object sender, EventArgs e)
         {
-            AMCfcam2.FullScreen = true;
+            lblCompression.Text = trkbcam1Compression.Value.ToString();
         }
 
-        private void button2_Click_1(object sender, EventArgs e)
+        private void tkbBrightness_Scroll_1(object sender, EventArgs e)
         {
-            reset_default_settings();
+            lblBright.Text = tkbBrightness.Value.ToString();
         }
 
-        private void btnSaveSetting_Click_1(object sender, EventArgs e)
+        private void tkbContrast_Scroll_1(object sender, EventArgs e)
+        {
+            lblContrast.Text = tkbContrast.Value.ToString();
+        }
+
+        private void tkbSaturation_Scroll_1(object sender, EventArgs e)
+        {
+            lblSaturation.Text = tkbSaturation.Value.ToString();
+        }
+
+        private void tkbSharpness_Scroll_1(object sender, EventArgs e)
+        {
+            lblSharpness.Text = tkbSharpness.Value.ToString();
+        }
+
+        private void tkbExposureValue_Scroll_1(object sender, EventArgs e)
+        {
+            lblExposureValue.Text = tkbExposureValue.Value.ToString();
+        }
+
+        private void chkDate_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (chkDate.Checked == true) { txtOverlay.Text += " %D"; }
+            else { txtOverlay.Text = txtOverlay.Text.Replace("%D", string.Empty); }
+        }
+
+        private void chkTime_CheckedChanged_1(object sender, EventArgs e)
+        {
+            if (chkTime.Checked == true) { txtOverlay.Text += " %T"; }
+            else { txtOverlay.Text = txtOverlay.Text.Replace("%T", string.Empty); }
+        }
+
+        private void btnSaveSetting_Click(object sender, EventArgs e)
         {
             AMCfcam2.Stop();
 
@@ -311,46 +349,52 @@ namespace testform
             AMCfcam2.Play();
         }
 
-        private void trkbcam1Compression_Scroll_1(object sender, EventArgs e)
+        private void btnRestablecer_Click(object sender, EventArgs e)
         {
-            lblCompression.Text = trkbcam1Compression.Value.ToString();
+            reset_default_settings();
         }
 
-        private void tkbBrightness_Scroll_1(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            lblBright.Text = tkbBrightness.Value.ToString();
+            AMCfcam2.FullScreen = true;
         }
 
-        private void tkbContrast_Scroll_1(object sender, EventArgs e)
+        private void btnConectar_Click(object sender, EventArgs e)
         {
-            lblContrast.Text = tkbContrast.Value.ToString();
+            if (ipAddressControl1.Text == "...")
+            {
+                MessageBox.Show("IP no ingresada");
+            }
+            else
+            {
+                AMCfcam2.Stop();
+                //Inicio de camara al iniciar modulo setting camara   ||
+                string url = "/axis-cgi/mjpg/video.cgi";
+                string urlDef = $"http://{ipAddressControl1.Text}{url}";
+                AMCfcam2.MediaURL = urlDef;
+                AMCfcam2.MediaType = "MJPEG";
+                AMCfcam2.Play();
+                reset_default_settings();
+            }
         }
 
-        private void tkbSaturation_Scroll_1(object sender, EventArgs e)
+        private void btnGuardar_Click(object sender, EventArgs e)
         {
-            lblSaturation.Text = tkbSaturation.Value.ToString();
-        }
+            string nombrecam = "Camara2";
+            var ip_camera = new set_cam()
+            {
+                ip_camara = ipAddressControl1.Text,
+                nombre_camara = nombrecam
+            };
+            var sIniFile = File.ReadAllText(serverpathCamera);
+            var cameraDes = JsonConvert.DeserializeObject<List<set_cam>>(sIniFile);
+            if (cameraDes == null)
+                cameraDes = new List<set_cam>();
+            cameraDes.Add(ip_camera);
+            string datosJson = JsonConvert.SerializeObject(cameraDes);
+            File.WriteAllText(serverpathCamera, datosJson);
+            MessageBox.Show($"Direccion '{ ipAddressControl1.Text}' guardada.", "Dirección IP Guardada", MessageBoxButtons.OK);
 
-        private void tkbSharpness_Scroll_1(object sender, EventArgs e)
-        {
-            lblSharpness.Text = tkbSharpness.Value.ToString();
-        }
-
-        private void tkbExposureValue_Scroll_1(object sender, EventArgs e)
-        {
-            lblExposureValue.Text = tkbExposureValue.Value.ToString();
-        }
-
-        private void chkDate_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (chkDate.Checked == true) { txtOverlay.Text += " %D"; }
-            else { txtOverlay.Text = txtOverlay.Text.Replace("%D", string.Empty); }
-        }
-
-        private void chkTime_CheckedChanged_1(object sender, EventArgs e)
-        {
-            if (chkTime.Checked == true) { txtOverlay.Text += " %T"; }
-            else { txtOverlay.Text = txtOverlay.Text.Replace("%T", string.Empty); }
         }
     }
 }

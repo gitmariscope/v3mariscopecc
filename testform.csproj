@@ -100,6 +100,7 @@
     <Compile Include="FormROV.Designer.cs">
       <DependentUpon>FormROV.cs</DependentUpon>
     </Compile>
+    <None Include="json\camara2.json" />
     <Compile Include="models\camera.cs" />
     <Compile Include="models\set_cam.cs" />
     <Compile Include="Program.cs" />
@@ -138,6 +139,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="json\camara1.json" />
+    <None Include="json\camara3.json" />
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -170,6 +172,9 @@
       <Isolated>False</Isolated>
       <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="icons\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

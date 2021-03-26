@@ -29,6 +29,7 @@ namespace testform
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSetCam2));
             this.tabControlSetCam2 = new System.Windows.Forms.TabControl();
             this.Stream = new System.Windows.Forms.TabPage();
@@ -81,11 +82,18 @@ namespace testform
             this.label15 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.txtOverlay = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnSaveSetting = new System.Windows.Forms.Button();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.AMCfcam2 = new AxAXISMEDIACONTROLLib.AxAxisMediaControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btnConectar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.ipAddressControl1 = new IPAddressControlLib.IPAddressControl();
+            this.label18 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.btnRestablecer = new System.Windows.Forms.Button();
+            this.btnSaveSetting = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.tabControlSetCam2.SuspendLayout();
             this.Stream.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -103,10 +111,13 @@ namespace testform
             this.groupBox5.SuspendLayout();
             this.groupBox6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.AMCfcam2)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControlSetCam2
             // 
+            this.tabControlSetCam2.Controls.Add(this.tabPage1);
             this.tabControlSetCam2.Controls.Add(this.Stream);
             this.tabControlSetCam2.Controls.Add(this.Image);
             this.tabControlSetCam2.Controls.Add(this.Overlay);
@@ -641,36 +652,6 @@ namespace testform
             this.txtOverlay.Size = new System.Drawing.Size(176, 20);
             this.txtOverlay.TabIndex = 0;
             // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(218, 401);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(95, 37);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Pantalla Completa";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_1);
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(117, 401);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(95, 37);
-            this.button2.TabIndex = 9;
-            this.button2.Text = "Valores Default";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
-            // 
-            // btnSaveSetting
-            // 
-            this.btnSaveSetting.Location = new System.Drawing.Point(16, 401);
-            this.btnSaveSetting.Name = "btnSaveSetting";
-            this.btnSaveSetting.Size = new System.Drawing.Size(95, 37);
-            this.btnSaveSetting.TabIndex = 8;
-            this.btnSaveSetting.Text = "Guardar Cambios";
-            this.btnSaveSetting.UseVisualStyleBackColor = true;
-            this.btnSaveSetting.Click += new System.EventHandler(this.btnSaveSetting_Click_1);
-            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.AMCfcam2);
@@ -690,15 +671,119 @@ namespace testform
             this.AMCfcam2.Size = new System.Drawing.Size(462, 398);
             this.AMCfcam2.TabIndex = 0;
             // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Size = new System.Drawing.Size(294, 353);
+            this.tabPage1.TabIndex = 3;
+            this.tabPage1.Text = "Setting IP";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btnConectar);
+            this.groupBox7.Controls.Add(this.btnGuardar);
+            this.groupBox7.Controls.Add(this.ipAddressControl1);
+            this.groupBox7.Controls.Add(this.label18);
+            this.groupBox7.Location = new System.Drawing.Point(3, 3);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(288, 113);
+            this.groupBox7.TabIndex = 1;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Ip Camera";
+            // 
+            // btnConectar
+            // 
+            this.btnConectar.Location = new System.Drawing.Point(206, 56);
+            this.btnConectar.Name = "btnConectar";
+            this.btnConectar.Size = new System.Drawing.Size(75, 23);
+            this.btnConectar.TabIndex = 3;
+            this.btnConectar.Text = "Conectar";
+            this.btnConectar.UseVisualStyleBackColor = true;
+            this.btnConectar.Click += new System.EventHandler(this.btnConectar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.Location = new System.Drawing.Point(125, 56);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.btnGuardar.Size = new System.Drawing.Size(75, 23);
+            this.btnGuardar.TabIndex = 2;
+            this.btnGuardar.Text = "Guardar IP";
+            this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // ipAddressControl1
+            // 
+            this.ipAddressControl1.AllowInternalTab = false;
+            this.ipAddressControl1.AutoHeight = true;
+            this.ipAddressControl1.BackColor = System.Drawing.SystemColors.Window;
+            this.ipAddressControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.ipAddressControl1.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.ipAddressControl1.Location = new System.Drawing.Point(125, 29);
+            this.ipAddressControl1.MinimumSize = new System.Drawing.Size(87, 20);
+            this.ipAddressControl1.Name = "ipAddressControl1";
+            this.ipAddressControl1.ReadOnly = false;
+            this.ipAddressControl1.Size = new System.Drawing.Size(156, 20);
+            this.ipAddressControl1.TabIndex = 1;
+            this.ipAddressControl1.Text = "...";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(6, 29);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(113, 13);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Direccion IP Camara 1";
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(204, 395);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(54, 43);
+            this.button1.TabIndex = 14;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnRestablecer
+            // 
+            this.btnRestablecer.FlatAppearance.BorderSize = 0;
+            this.btnRestablecer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRestablecer.Image = ((System.Drawing.Image)(resources.GetObject("btnRestablecer.Image")));
+            this.btnRestablecer.Location = new System.Drawing.Point(144, 395);
+            this.btnRestablecer.Name = "btnRestablecer";
+            this.btnRestablecer.Size = new System.Drawing.Size(54, 43);
+            this.btnRestablecer.TabIndex = 13;
+            this.btnRestablecer.UseVisualStyleBackColor = true;
+            this.btnRestablecer.Click += new System.EventHandler(this.btnRestablecer_Click);
+            // 
+            // btnSaveSetting
+            // 
+            this.btnSaveSetting.FlatAppearance.BorderSize = 0;
+            this.btnSaveSetting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSaveSetting.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveSetting.Image")));
+            this.btnSaveSetting.Location = new System.Drawing.Point(84, 395);
+            this.btnSaveSetting.Name = "btnSaveSetting";
+            this.btnSaveSetting.Size = new System.Drawing.Size(54, 43);
+            this.btnSaveSetting.TabIndex = 12;
+            this.btnSaveSetting.UseVisualStyleBackColor = true;
+            this.btnSaveSetting.Click += new System.EventHandler(this.btnSaveSetting_Click);
+            // 
             // fSetCam2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(805, 450);
-            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnRestablecer);
             this.Controls.Add(this.btnSaveSetting);
+            this.Controls.Add(this.groupBox6);
             this.Controls.Add(this.tabControlSetCam2);
             this.Name = "fSetCam2";
             this.Text = "Settings Camera 2";
@@ -725,6 +810,9 @@ namespace testform
             this.groupBox5.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.AMCfcam2)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
+            this.groupBox7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -782,10 +870,17 @@ namespace testform
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label13;
         public System.Windows.Forms.TextBox txtOverlay;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnSaveSetting;
         private System.Windows.Forms.GroupBox groupBox6;
         public AxAXISMEDIACONTROLLib.AxAxisMediaControl AMCfcam2;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button btnConectar;
+        private System.Windows.Forms.Button btnGuardar;
+        private IPAddressControlLib.IPAddressControl ipAddressControl1;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnRestablecer;
+        private System.Windows.Forms.Button btnSaveSetting;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }

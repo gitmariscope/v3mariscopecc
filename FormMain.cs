@@ -155,31 +155,14 @@ namespace testform
                 fc3.Activate();
             }
         }
-
-        private void comunicacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void crearCarpetaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            
         }
 
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
-
-        //private void abrirForms(string camera)
-        //{
-        //    if (camera == null)
-        //    {
-        //        camera = new fCamera1();
-        //        camera.MdiParent = this;
-        //        camera.FormClosed += new FormClosedEventHandler(CloseForm);
-        //        camera.Show();
-        //    }
-        //    else
-        //    {
-        //        camera.Activate();
-        //    }
-        //}
     }
 }

@@ -1,0 +1,14 @@
+[
+    {
+        "ip_camara": "192.168.2.245",
+        "nombre_camara": "Camara2"
+    },
+    {
+        "ip_camara": "192.168.2.250",
+        "nombre_camara": "Camara2"
+    },
+    {
+        "ip_camara": "192.168.2.251",
+        "nombre_camara": "Camara2"
+    }
+]

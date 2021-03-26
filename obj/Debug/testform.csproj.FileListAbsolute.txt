@@ -18,6 +18,7 @@ C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\De
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\Newtonsoft.Json.xml
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\Interop.AXISMEDIACONTROLLib.dll
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\bin\Debug\AxInterop.AXISMEDIACONTROLLib.dll
+C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csprojAssemblyReference.cache
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\Interop.AXISMEDIACONTROLLib.dll
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\AxInterop.AXISMEDIACONTROLLib.dll
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csproj.ResolveComReference.cache
@@ -35,4 +36,3 @@ C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\De
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csproj.CopyComplete
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.exe
 C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.pdb
-C:\Users\Felipe Celis\Desktop\Mariscope Desarrollo\V3MariscopeCC\testform\obj\Debug\testform.csprojAssemblyReference.cache
